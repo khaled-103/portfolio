@@ -17,13 +17,12 @@ export default async function HomeHeader({lang}:{lang:LanguagesKeysType}) {
                             <LanguageSwitch />
                             <ThemeToggle />
                         </div>
-                        <CustomLink href="/" className="bg-gradient-to-r from-main to-main/70 bg-clip-text text-transparent  text-2xl font-bold">KhaledAli</CustomLink>
-                        {/* <Image src={"/assets/logo.jpg"} className="rounded-[50%] " width={80} height={80} alt="logo image"/> */}
+                        <CustomLink href="/" className="text-main text-2xl font-bold">KhaledAli</CustomLink>
                     </div>
                     <div className="sm:flex md:items-center md:space-x-1 hidden">
                         <nav className="md:flex hidden md:space-x-4 md:items-center">
                             {[dictionary.home,dictionary.about,dictionary.projects,dictionary.contact].map((link) => (
-                                <CustomLink key={link} href={`#${link.toLowerCase()}`} className="border-b-2 transition-colors border-transparent hover:border-b-main px-3 font-[400] dark:text-white text-black">{link}</CustomLink>
+                                <CustomLink key={link} href={`#${link.toLowerCase()}`} className="border-b-2 capitalize transition-colors border-transparent hover:border-b-main px-3 font-[400] dark:text-white text-black">{link}</CustomLink>
                             ))}
                         </nav>
                         <DownloadCvBtn>

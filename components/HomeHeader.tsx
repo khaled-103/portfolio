@@ -9,7 +9,7 @@ import { LanguagesKeysType } from "@/lib/types";
 export default async function HomeHeader({lang}:{lang:LanguagesKeysType}) {
     const dictionary = await getDictionary(lang);
     return (
-        <header className="lg:w-[90%] md:w-[92%] w-[98%] mx-auto bg-transparent">
+        <header className="xl:w-[80%] 2xl:w-[75%] lg:w-[88%] md:w-[92%] w-[98%] mx-auto bg-transparent">
             <div className="px-1 pt-7 pb-3">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center space-x-3">

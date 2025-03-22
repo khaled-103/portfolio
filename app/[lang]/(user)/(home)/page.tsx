@@ -8,10 +8,9 @@ export default async function Home({params}:{params:Promise<{lang:string}>}) {
   return (
     <>
       <HomeHeader lang={lang}/>
-      <main className="lg:w-[90%] md:w-[92%] w-[98%] mx-auto">
+      <main className="xl:w-[80%] 2xl:w-[75%] lg:w-[88%] md:w-[92%] w-[98%] mx-auto">
         <Intro lang={lang}/>
       </main>
-
     </>
   );
 }

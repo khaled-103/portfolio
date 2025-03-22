@@ -1,7 +1,7 @@
 "use client"
 import { FaBars } from "react-icons/fa";
 import CustomLink from "./CustomLink";
-import DownloadCvBtn from "./DownloadCvBtn";
+import BaseBtn from "./BaseBtn";
 import { MdOutlineClose } from "react-icons/md";
 import { useState } from "react";
 import { useDictionary } from "./DictionaryProvider";
@@ -21,7 +21,7 @@ export default function SideBarHeader() {
                             <CustomLink key={link} href={`#${link.toLowerCase()}`} className="hover:ps-4 transition-all px-3 font-[400] text-black">{link}</CustomLink>
                         ))}
                     </nav>
-                    <DownloadCvBtn>{dictionary.download_cv}</DownloadCvBtn>
+                    <BaseBtn>{dictionary.download_cv}</BaseBtn>
                 </div>
             </aside>
         </div>

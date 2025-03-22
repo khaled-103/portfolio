@@ -1,6 +1,6 @@
 import { getDictionary } from "@/lib/translate";
 import CustomLink from "./CustomLink";
-import DownloadCvBtn from "./DownloadCvBtn";
+import BaseBtn from "./BaseBtn";
 import LanguageSwitch from "./LanguageSwitch";
 import SideBarHeader from "./SideBarHeader";
 import ThemeToggle from "./ThemeToggle";
@@ -25,9 +25,9 @@ export default async function HomeHeader({lang}:{lang:LanguagesKeysType}) {
                                 <CustomLink key={link} href={`#${link.toLowerCase()}`} className="border-b-2 capitalize transition-colors border-transparent hover:border-b-main px-3 font-[400] dark:text-white text-black">{link}</CustomLink>
                             ))}
                         </nav>
-                        <DownloadCvBtn>
+                        <BaseBtn>
                             {dictionary.download_cv}
-                        </DownloadCvBtn>
+                        </BaseBtn>
                     </div>
                     <SideBarHeader/>
                 </div>

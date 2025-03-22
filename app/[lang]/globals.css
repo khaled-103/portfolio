@@ -20,7 +20,7 @@
   }
 }
 html{
-  font-size: clamp(15px, 1vw + 2px, 28px);
+  font-size: clamp(15px, 1vw + 3px, 32px);
 }
 
 body {

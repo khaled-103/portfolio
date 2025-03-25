@@ -3,7 +3,6 @@ import { DEFAULT_LANG, LANGUAGES } from '@/lib/constants/index';
 import { LanguagesKeysType } from '@/lib/types';
 import Cookies from 'js-cookie'
 import { useParams, usePathname, useRouter } from 'next/navigation';
-import { ChangeEvent } from 'react';
 import { MdLanguage } from "react-icons/md";
 
 export default function LanguageSwitch() {

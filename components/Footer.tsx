@@ -1,14 +1,15 @@
 import { LanguagesKeysType } from "@/lib/types";
-
+import { FaFacebookF,FaGithub,FaInstagram,FaLinkedinIn } from "react-icons/fa";
 export default function Footer({ lang }: { lang: LanguagesKeysType }) {
   const socialMedia = [
-    { name: "Facebook", link: "https://facebook.com" },
-    { name: "Twitter", link: "https://twitter.com" },
-    { name: "LinkedIn", link: "https://linkedin.com" },
+    { icon: FaFacebookF, link: "https://facebook.com",className:"hover:text-blue-600" },
+    { icon: FaGithub, link: "https://github.com" ,className:"hover:text-gray-500"},
+    { icon: FaLinkedinIn, link: "https://linkedin.com",className:"hover:text-blue-600" },
+    { icon: FaInstagram, link: "https://instagram.com",className:"hover:text-red-600" },
   ];
 
   return (
-    <footer className="mt-8 py-4 border-t dark:border-gray-700">
+    <footer className="mt-8 py-4 border-t border-gray-600">
       <div className="flex justify-center space-x-4">
         {socialMedia.map((social, index) => (
           <a
@@ -16,9 +17,9 @@ export default function Footer({ lang }: { lang: LanguagesKeysType }) {
             href={social.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-400 hover:text-blue-500"
+            className="text-gray-600 dark:text-gray-400"
           >
-            {social.name}
+            {<social.icon className={social.className}/>}
           </a>
         ))}
       </div>

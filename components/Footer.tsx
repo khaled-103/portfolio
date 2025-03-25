@@ -9,7 +9,7 @@ export default function Footer({ lang }: { lang: LanguagesKeysType }) {
   ];
 
   return (
-    <footer className="mt-8 py-4 border-t border-gray-600">
+    <footer className="py-3 border-t border-gray-600">
       <div className="flex justify-center space-x-4">
         {socialMedia.map((social, index) => (
           <a

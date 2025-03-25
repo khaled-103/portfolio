@@ -13,11 +13,12 @@ export default async function HomeHeader({lang}:{lang:LanguagesKeysType}) {
             <div className="px-1 pt-7 pb-3">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center space-x-3">
+                        
+                        <CustomLink href="/" className="py-1 italic px-3 text-white rounded-[50%] bg-main text-2xl font-bold">K</CustomLink>
                         <div className="flex items-center space-x-1">
                             <LanguageSwitch />
                             <ThemeToggle />
                         </div>
-                        <CustomLink href="/" className="text-main text-2xl font-bold">KhaledAli</CustomLink>
                     </div>
                     <div className="sm:flex md:items-center md:space-x-1 hidden">
                         <nav className="md:flex hidden md:space-x-4 md:items-center">

@@ -14,7 +14,7 @@ export default async function HomeHeader({lang}:{lang:LanguagesKeysType}) {
                 <div className="flex justify-between items-center">
                     <div className="flex items-center space-x-3">
                         
-                        <CustomLink href="/" className="py-1 italic px-3 text-white rounded-[50%] bg-main text-2xl font-bold">K</CustomLink>
+                        <CustomLink href="/" className="py-1 px-3 text-white rounded-[50%] bg-main text-2xl font-bold">K</CustomLink>
                         <div className="flex items-center space-x-1">
                             <LanguageSwitch />
                             <ThemeToggle />

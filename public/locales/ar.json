@@ -8,5 +8,12 @@
     "khaled_ali":"خالد الشيخ علي",
     "frontend":"مطور ويب",
     "intro_desc":"مطور واجهات امامية لمواقع الويب بخبرة تزيد عن سنتين في تطوير مواقع بجودة عالية ",
-    "contanct_me":"تواصل معي"
+    "contanct_me":"تواصل معي",
+    "education":"التعليم",
+    "computer_engineer":"مهندس حاسوب",
+    "experince":"الخبرات",
+    "years":"{count} سنوات",
+    "completed":"{count} مكتمل",
+    "opportunities":"opportunities",
+    "open_to_work":"متاح للعمل حاليا"
 }

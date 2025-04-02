@@ -8,5 +8,12 @@
     "khaled_ali":"khaled sheikh ali",
     "frontend":"frontend developer",
     "intro_desc":"web developer with over two years of experience in building high-quality and advanced web applications",
-    "contanct_me":"contact me"
-}   
+    "contanct_me":"contact me",
+    "education":"education",
+    "computer_engineer":"computer engineer",
+    "experince":"experince",
+    "years":"{count} years",
+    "completed":"{count} completed",
+    "opportunities":"opportunities",
+    "open_to_work":"open to work"
+}

@@ -36,7 +36,7 @@ export default async function RootLayout({
     <html lang={lang} suppressHydrationWarning dir={LANGUAGES[lang as LanguagesKeysType].supportRtl ? "rtl":"ltr"}>
       <body
       /*${geistSans.variable} ${geistMono.variable}*/
-        className={`${popions.variable} antialiased bg-gray-100 dark:bg-main-dark min-h-screen `}
+        className={`${popions.variable} antialiased bg-gradient-to-r bg-white dark:bg-main-dark min-h-screen `}
       >
         <script
           dangerouslySetInnerHTML={{

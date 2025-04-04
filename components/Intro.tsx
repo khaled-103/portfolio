@@ -7,7 +7,7 @@ import { FaFacebookSquare, FaGithub, FaInstagram, FaLinkedin } from "react-icons
 export default async function Intro({ lang }: { lang: LanguagesKeysType }) {
     const dictionary = await getDictionary(lang);
     return (
-        <section className="pt-[4rem] pb-[3.7rem] md:justify-between  md:flex-row flex-col-reverse flex ">
+        <section className="pt-[4rem] md:justify-between  md:flex-row flex-col-reverse flex ">
             <div className="flex  dark:text-white  text-black flex-col">
                 <span className="capitalize">{dictionary.hi_i_am}</span>
                 <span className="capitalize text-main">{dictionary.khaled_ali}</span>
@@ -23,7 +23,7 @@ export default async function Intro({ lang }: { lang: LanguagesKeysType }) {
                     <FaLinkedin className="text-gray-600 dark:text-gray-200 text-lg cursor-pointer" />
                 </div>
                 <div className="relative w-56 h-56 ">
-                    <Image className="object-cover border-4 border-white object-top rounded-[50%]" fill src={"/assets/developer.jpg"} alt="developer image" />
+                    <Image className="object-cover border-4 border-gray-400 dark:border-white object-top rounded-[50%]" fill src={"/assets/developer.jpg"} alt="developer image" />
                 </div>
             </div>
         </section>

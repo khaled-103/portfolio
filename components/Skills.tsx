@@ -1,24 +1,26 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaVuejs, FaGitAlt,FaSearch } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs, SiGithub } from "react-icons/si";
 import SectionContainer from "./SectionContainer";
+import { useTranslations } from "next-intl";
 
 export default function Skills() {
+  const t = useTranslations();
   const skills = [
-    { name: "HTML", icon: <FaHtml5 className="text-orange-500 text-2xl" />,level:"advanced" },
-    { name: "CSS", icon: <FaCss3Alt className="text-blue-500 text-2xl" /> ,level:"advanced"},
-    { name: "JavaScript", icon: <FaJs className="text-yellow-500 text-2xl" /> ,level:"advanced"},
-    { name: "Tailwind", icon: <SiTailwindcss className="text-teal-500 text-2xl" />,level:"advanced" },
-    { name: "React", icon: <FaReact className="text-blue-400 text-2xl" /> ,level:"advanced"},
-    { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white text-2xl" />,level:"advanced" },
-    { name: "Vue", icon: <FaVuejs className="text-green-500 text-2xl" />,level:"intermdeiate" },
-    { name: "Git", icon: <FaGitAlt className="text-red-500 text-2xl" />,level:"advanced" },
-    { name: "GitHub", icon: <SiGithub className="text-gray-700 dark:text-gray-300 text-2xl" />,level:"advanced" },
-    { name: "SEO", icon: <FaSearch className="text-teal-500  text-2xl" />,level:"advanced" },
+    { name: "HTML", icon: <FaHtml5 className="text-orange-500 text-2xl" />,level:t("advanced") },
+    { name: "CSS", icon: <FaCss3Alt className="text-blue-500 text-2xl" /> ,level:t("advanced")},
+    { name: "JavaScript", icon: <FaJs className="text-yellow-500 text-2xl" /> ,level:t("advanced")},
+    { name: "Tailwind", icon: <SiTailwindcss className="text-teal-500 text-2xl" />,level:t("advanced") },
+    { name: "React", icon: <FaReact className="text-blue-400 text-2xl" /> ,level:t("advanced")},
+    { name: "Next.js", icon: <SiNextdotjs className="text-black dark:text-white text-2xl" />,level:t("advanced") },
+    { name: "Vue", icon: <FaVuejs className="text-green-500 text-2xl" />,level:t("intermdeiate") },
+    { name: "Git", icon: <FaGitAlt className="text-red-500 text-2xl" />,level:t("advanced") },
+    { name: "GitHub", icon: <SiGithub className="text-gray-700 dark:text-gray-300 text-2xl" />,level:t("advanced") },
+    { name: "SEO", icon: <FaSearch className="text-teal-500  text-2xl" />,level:t("advanced") },
   
   ];
 
   return (
-    <SectionContainer title="skills" className="">
+    <SectionContainer title={t('skills')}>
       <div className=" mx-auto md:mx-0 px-4">
         <ul className="grid grid-cols-12 py-4 items-center justify-center gap-4">
           {skills.map((skill, index) => (

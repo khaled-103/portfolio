@@ -1,6 +1,7 @@
-import { LanguagesKeysType } from "@/lib/types";
+import { useTranslations } from "next-intl";
 import { FaFacebookF,FaGithub,FaInstagram,FaLinkedinIn } from "react-icons/fa";
-export default function Footer({ lang }: { lang: LanguagesKeysType }) {
+export default function Footer() {
+  const t = useTranslations();
   const socialMedia = [
     { icon: FaFacebookF, link: "https://facebook.com",className:"hover:text-blue-600" },
     { icon: FaGithub, link: "https://github.com" ,className:"hover:text-gray-500"},
@@ -24,7 +25,7 @@ export default function Footer({ lang }: { lang: LanguagesKeysType }) {
         ))}
       </div>
       <p className="mt-4 text-center text-gray-600 dark:text-gray-400">
-        &copy; {new Date().getFullYear()} {lang === "ar" ? "جميع الحقوق محفوظة" : "All rights reserved"}.
+        &copy; {new Date().getFullYear()} {t('rights_reserved')}.
       </p>
     </footer>
   );

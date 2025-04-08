@@ -10,7 +10,7 @@ import { IoSunnyOutline } from "react-icons/io5";
 export default function ThemeToggle() {
     const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
     useEffect(() => {
-        let savedTheme = localStorage.getItem("theme");
+        const savedTheme = localStorage.getItem("theme");
         if (savedTheme === "dark" || savedTheme === "light")
             handleThemeChange(savedTheme);
     }, []);

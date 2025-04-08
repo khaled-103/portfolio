@@ -1,6 +1,7 @@
 {
     "home":"home",
-    "about":"about",
+    "about_me":"about me",
+    "about_desc":"Front-end developer turning ideas into seamless, interactive web experiences. I blend design and code to craft user-friendly interfaces. My passion for coding drives me to create dynamic and engaging digital experiences.",
     "contact":"contact",
     "projects":"Projects",
     "download_cv":"download cv",
@@ -15,5 +16,9 @@
     "years":"{count} years",
     "completed":"{count} completed",
     "opportunities":"opportunities",
-    "open_to_work":"open to work"
+    "open_to_work":"open to work",
+    "advanced":"advanced",
+    "intermdeiate":"intermdeiate",
+    "skills":"skills",
+    "rights_reserved":"all rights reserved"
 }

@@ -3,13 +3,10 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { LANGUAGES } from "@/lib/constants";
 import { LanguagesKeysType } from "@/lib/types";
-import { DictionaryProvider } from "@/components/DictionaryProvider";
-import { getDictionary } from "@/lib/translate";
+import {NextIntlClientProvider, hasLocale} from 'next-intl';
+import {notFound} from 'next/navigation';
+import {routing} from '@/lib/i18n/routing';
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
 
 const popions = Poppins({
   variable: "--font-poppins",
@@ -27,13 +24,15 @@ export default async function RootLayout({
   params
 }: Readonly<{
   children: React.ReactNode;
-  params:Promise<{lang:string}>
+  params:Promise<{locale:string}>
 
 }>) {
-  const {lang} = await params;  
-  const dictionary = await getDictionary(lang as LanguagesKeysType);
+  const {locale} = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }  
   return (
-    <html lang={lang} suppressHydrationWarning dir={LANGUAGES[lang as LanguagesKeysType].supportRtl ? "rtl":"ltr"}>
+    <html lang={locale} suppressHydrationWarning dir={LANGUAGES[locale as LanguagesKeysType].supportRtl ? "rtl":"ltr"}>
       <body
       /*${geistSans.variable} ${geistMono.variable}*/
         className={`${popions.variable} antialiased bg-gradient-to-r bg-white dark:bg-main-dark min-h-screen `}
@@ -53,9 +52,9 @@ export default async function RootLayout({
           }}
         />
         {/* <NextTopLoader/> */}
-        <DictionaryProvider dictionary={dictionary}>
+        <NextIntlClientProvider>
           {children}
-        </DictionaryProvider>
+        </NextIntlClientProvider>
         
       </body>
     </html>

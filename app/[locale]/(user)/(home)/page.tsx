@@ -1,4 +1,5 @@
 import AboutMe from "@/components/AboutMe";
+import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import HomeHeader from "@/components/HomeHeader";
 import Intro from "@/components/Intro";
@@ -12,6 +13,7 @@ export default  function Home() {
         <Intro/>
         <AboutMe/>
         <Skills/>
+        <Experience/>
         <Footer/>
       </main>
     </>

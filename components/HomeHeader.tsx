@@ -21,7 +21,7 @@ export default  function HomeHeader() {
                     </div>
                     <div className="sm:flex md:items-baseline md:space-x-1 hidden">
                         <nav className="md:flex hidden md:space-x-4 md:items-center">
-                            {[t('home'),t('about_me'),t('projects'),t('contact')].map((link) => (
+                            {[t('home'),t('about_me'),t('projects'),t('experience'),t('contact')].map((link) => (
                                 <Link key={link} href={`#${link.toLowerCase()}`} className="border-b-4 capitalize transition-colors border-transparent hover:border-b-main px-3 font-[400] dark:text-white text-black">{link}</Link>
                             ))}
                         </nav>

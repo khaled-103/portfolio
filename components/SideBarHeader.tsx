@@ -17,7 +17,7 @@ export default function SideBarHeader() {
                 <Link href="/" className="bg-gradient-to-r from-main to-main/70 bg-clip-text text-transparent  text-2xl font-bold mb-4">{t('khaled_ali')}</Link>
                 <div className="flex flex-col grow justify-between">
                     <nav className="flex flex-col space-y-4">
-                        {[t('home'),t('about_me'),t('projects'),t('contact')].map((link) => (
+                        {[t('home'),t('about_me'),t('projects'),t('experience'),t('contact')].map((link) => (
                             <Link key={link} href={`#${link.toLowerCase()}`} className="hover:ps-4 transition-all px-3 font-[400] text-black">{link}</Link>
                         ))}
                     </nav>

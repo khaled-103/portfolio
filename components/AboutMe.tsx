@@ -18,7 +18,7 @@ export default function AboutMe() {
             <p className="text-gray-600 text-base text-justify dark:text-gray-200 mb-5">{t('about_desc')}</p>
             <div className="grid grid-cols-12 gap-2 ">
                 <AboutCard icon={<IoSchoolOutline className="dark:text-white text-gray-700 text-2xl"/>} title={t('education')} desc={t('computer_engineer')} />
-                <AboutCard icon={<LuShoppingBag className="dark:text-white text-gray-700 text-2xl"/>} title={t('experince')} desc={t('years',{count:"+2"})} />
+                <AboutCard icon={<LuShoppingBag className="dark:text-white text-gray-700 text-2xl"/>} title={t('experience')} desc={t('years',{count:"+2"})} />
                 <AboutCard icon={<MdWorkspacePremium className="dark:text-white text-gray-700 text-2xl"/>} title={t('projects')} desc={t('completed', {count:"+10"})} />
                 <AboutCard icon={<FiPhoneCall className="dark:text-white text-gray-700 text-2xl"/>} title={t('opportunities')} desc={t('open_to_work')} />
             </div>

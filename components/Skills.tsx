@@ -24,7 +24,7 @@ export default function Skills() {
       <div className=" mx-auto md:mx-0 px-4">
         <ul className="grid grid-cols-12 py-4 items-center justify-center gap-4">
           {skills.map((skill, index) => (
-            <li key={index} className="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 flex items-center gap-x-2">
+            <li key={index} className="col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2 flex gap-x-2">
               {skill.icon}
               <div className="flex flex-col">
                 <span className=" text-gray-600 dark:text-gray-300">{skill.name}</span>

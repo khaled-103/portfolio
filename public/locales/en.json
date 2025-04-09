@@ -12,7 +12,6 @@
     "contanct_me":"contact me",
     "education":"education",
     "computer_engineer":"computer engineer",
-    "experince":"experince",
     "years":"{count} years",
     "completed":"{count} completed",
     "opportunities":"opportunities",
@@ -20,5 +19,13 @@
     "advanced":"advanced",
     "intermdeiate":"intermdeiate",
     "skills":"skills",
-    "rights_reserved":"all rights reserved"
+    "rights_reserved":"all rights reserved",
+    "experience":"experience",
+    "trillium_soft":"Trillium Soft",
+    "web_dev":"Web Developer",
+    "freelancer":"Freelancer",
+    "palestine":"palestine ",
+    "gaza":"gaza",
+    "online":"online"
+    
 }

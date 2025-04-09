@@ -1,31 +1,40 @@
-import { LanguagesKeysType } from "@/lib/types";
+import { GiPositionMarker, Gi3dMeeple, GiAbstract051 } from "react-icons/gi";
+import SectionContainer from "./SectionContainer";
+import { useTranslations } from "next-intl";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
-export default function Experience({ lang }: { lang: LanguagesKeysType }) {
-  const experiences = {
-    en: [
-      { title: "Trillium Soft", duration: "2 years", role: "Software Developer" },
-      { title: "Freelancer", duration: "2 years", role: "Developer" },
-    ],
-    ar: [
-      { title: "تريليوم سوفت", duration: "سنتان", role: "مطور برمجيات" },
-      { title: "مستقل", duration: "سنتان", role: "مطور" },
-    ],
-  };
+export default function Experience() {
+  const t = useTranslations();
+
+  const experiences = [
+    { title: t('trillium_soft'), date: "2022 - 2024", duration: t('years', { count: "+2" }), role: t('web_dev'), site: t('palestine') + t('gaza') },
+    { title: t("freelancer"), date: "2022 - 2024", duration: t('years', { count: "+2" }), role: t("web_dev"), site: t("online") },
+  ];
 
   return (
-    <section className="my-8">
-      <h2 className="text-2xl font-bold dark:text-white">{lang === "ar" ? "الخبرات" : "Experience"}</h2>
-      <div className="mt-4 border-l-2 border-gray-300 dark:border-gray-600">
-        {experiences[lang].map((exp, index) => (
-          <div key={index} className="ml-4 mb-6 relative">
-            <div className="absolute -left-2 w-4 h-4 bg-blue-500 rounded-full dark:bg-blue-700"></div>
-            <h3 className="text-xl font-semibold dark:text-gray-200">{exp.title}</h3>
-            <p className="text-gray-600 dark:text-gray-400">{exp.role}</p>
-            <p className="text-sm text-gray-500 dark:text-gray-500">{exp.duration}</p>
+    <SectionContainer title={t('experience')}>
+      <div className="relative flex gap-x-6 w-fit md:gap-x-20 border-b-2 border-gray-600 dark:border-gray-200">
+        {experiences.map((exp, index) => (
+          <div key={index} className="py-6 pe-3 space-y-2 relative">
+            <div className="absolute -bottom-[.85rem] w-3 h-3 rounded-[50%] dark:bg-main-dark bg-white border-gray-600 dark:border-gray-200 border-2"></div>
+            <h3 className="text-lg mb-4 font-medium text-center py-0.5   shadow text-main-dark shadow-main-dark dark:shadow-white  dark:text-white">{exp.title}</h3>
+            <div className="flex gap-x-2">
+              <Gi3dMeeple className="text-yellow-500 text-lg" />
+              <p className="text-gray-600 dark:text-gray-200">{exp.role}</p>
+            </div>
+            <div className="flex gap-x-2">
+              <GiPositionMarker className="text-teal-500 text-lg" />
+              <span className="capitalize text-gray-600 dark:text-gray-200">{exp.site}</span>
+            </div>
+            <div className="flex gap-x-2">
+              <GiAbstract051 className="text-lg text-red-500" />
+              <p className="text-sm text-gray-600 dark:text-gray-200">{exp.date}</p>
+            </div>
           </div>
         ))}
+      <MdOutlineKeyboardArrowRight className="absolute bottom-0 end-0 translate-y-[54%] translate-x-[42%] text-xl dark:text-white text-main-dark" />
       </div>
-    </section>
+    </SectionContainer>
   );
 }
 

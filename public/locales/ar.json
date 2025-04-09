@@ -12,13 +12,19 @@
   "contanct_me": "تواصل معي",
   "education": "التعليم",
   "computer_engineer": "مهندس حاسوب",
-  "experince": "الخبرات",
   "years": "{count} سنوات",
   "completed": "{count} مكتمل",
   "opportunities": "فرص العمل",
   "open_to_work": "متاح للعمل حاليا",
   "advanced": "متقدم",
-  "intermdeiate":"متوسط",
+  "intermdeiate": "متوسط",
   "skills": "المهارات",
-  "rights_reserved": "جميع الحقوق محفوظة"
+  "rights_reserved": "جميع الحقوق محفوظة",
+  "experience": "الخبرات",
+  "trillium_soft": "Trillium Soft",
+  "web_dev": "مطور ويب",
+  "freelancer": "فريلانسر",
+  "palestine": "فلسطين ",
+  "gaza": "غزة",
+  "online": "اونلاين"
 }

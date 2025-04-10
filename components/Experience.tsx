@@ -1,7 +1,8 @@
-import { GiPositionMarker, Gi3dMeeple, GiAbstract051 } from "react-icons/gi";
+import { GiPositionMarker } from "react-icons/gi";
 import SectionContainer from "./SectionContainer";
 import { useTranslations } from "next-intl";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { MdOutlineKeyboardArrowRight, MdOutlineWorkHistory } from "react-icons/md";
+import { BsCalendarDate } from "react-icons/bs";
 
 export default function Experience() {
   const t = useTranslations();
@@ -13,13 +14,15 @@ export default function Experience() {
 
   return (
     <SectionContainer title={t('experience')}>
-      <div className="relative flex gap-x-6 w-fit md:gap-x-20 border-b-2 border-gray-600 dark:border-gray-200">
+      <div className="relative md:pe-12 min-w-90 flex gap-x-6 w-fit md:gap-x-20 border-b-2 border-gray-600 dark:border-gray-200">
         {experiences.map((exp, index) => (
-          <div key={index} className="py-6 pe-3 space-y-2 relative">
+          <div key={index} className="py-6  space-y-2 relative">
             <div className="absolute -bottom-[.85rem] w-3 h-3 rounded-[50%] dark:bg-main-dark bg-white border-gray-600 dark:border-gray-200 border-2"></div>
-            <h3 className="text-lg mb-4 font-medium text-center py-0.5   shadow text-main-dark shadow-main-dark dark:shadow-white  dark:text-white">{exp.title}</h3>
+            <h3 className="text-lg mb-4 font-medium text-center py-0.5 bg-gradient-to-r  from-teal-800 to-purple-800 text-white rounde-sm">
+              {exp.title}
+            </h3>
             <div className="flex gap-x-2">
-              <Gi3dMeeple className="text-yellow-500 text-lg" />
+              <MdOutlineWorkHistory className="text-yellow-500 text-lg" />
               <p className="text-gray-600 dark:text-gray-200">{exp.role}</p>
             </div>
             <div className="flex gap-x-2">
@@ -27,12 +30,12 @@ export default function Experience() {
               <span className="capitalize text-gray-600 dark:text-gray-200">{exp.site}</span>
             </div>
             <div className="flex gap-x-2">
-              <GiAbstract051 className="text-lg text-red-500" />
+              <BsCalendarDate className="text-lg text-red-500" />
               <p className="text-sm text-gray-600 dark:text-gray-200">{exp.date}</p>
             </div>
           </div>
         ))}
-      <MdOutlineKeyboardArrowRight className="absolute bottom-0 end-0 translate-y-[54%] translate-x-[42%] text-xl dark:text-white text-main-dark" />
+        <MdOutlineKeyboardArrowRight className="absolute -bottom-[.659rem] -end-[.6rem]  text-xl dark:text-white text-main-dark rtl:rotate-180" />
       </div>
     </SectionContainer>
   );

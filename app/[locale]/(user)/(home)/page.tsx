@@ -1,8 +1,10 @@
 import AboutMe from "@/components/AboutMe";
+import ContactMe from "@/components/ContactMe";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import HomeHeader from "@/components/HomeHeader";
 import Intro from "@/components/Intro";
+import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 export default  function Home() {
 
@@ -14,6 +16,8 @@ export default  function Home() {
         <AboutMe/>
         <Skills/>
         <Experience/>
+        <Projects/>
+        <ContactMe/>
         <Footer/>
       </main>
     </>

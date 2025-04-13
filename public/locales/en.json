@@ -2,14 +2,13 @@
     "home":"home",
     "about_me":"about me",
     "about_desc":"Front-end developer turning ideas into seamless, interactive web experiences. I blend design and code to craft user-friendly interfaces. My passion for coding drives me to create dynamic and engaging digital experiences.",
-    "contact":"contact",
     "projects":"Projects",
     "download_cv":"download cv",
     "hi_i_am":"hi i am",
     "khaled_ali":"khaled sheikh ali",
     "frontend":"frontend developer",
     "intro_desc":"web developer with over two years of experience in building high-quality and advanced web applications",
-    "contanct_me":"contact me",
+    "contact_me":"contact me",
     "education":"education",
     "computer_engineer":"computer engineer",
     "years":"{count} years",
@@ -26,6 +25,10 @@
     "freelancer":"Freelancer",
     "palestine":"palestine ",
     "gaza":"gaza",
-    "online":"online"
+    "online":"online",
+    "name":"name",
+    "email":"email",
+    "send":"send",
+    "message":"message"
     
 }

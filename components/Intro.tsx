@@ -12,7 +12,7 @@ export default function Intro() {
                 <span className="capitalize text-main">{t('khaled_ali')}</span>
                 <span className="uppercase text-2xl font-bold ">{t('frontend')}</span>
                 <p className="text-base max-w-[42rem] text-gray-600 dark:text-gray-300 my-2 font-light">{t('intro_desc')}</p>
-                <BaseBtn className="">{t('contanct_me')}</BaseBtn>
+                <BaseBtn className="">{t('contact_me')}</BaseBtn>
             </div>
             <div className="flex self-center gap-x-2 items-center">
                 <div className="flex flex-col gap-y-2 mt-2">

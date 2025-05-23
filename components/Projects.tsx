@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import SectionContainer from "./SectionContainer";
 import BaseCard from "./BaseCard";
 import Image from "next/image";
-import { FaAirbnb } from "react-icons/fa";
+import { BiShow } from "react-icons/bi";
 
 export default function Projects() {
     const t = useTranslations();
@@ -33,19 +33,19 @@ export default function Projects() {
             description: t("projects_items.aptu.desc"),
             tags: [
                 {
-                    title: "React",
-                    colorClass: "text-blue-400"
+                    title: "Html,",
+                    colorClass: "text-orange-500 dark:text-white"
                 },
                 {
-                    title: "Next.js",
-                    colorClass: "text-black dark:text-white"
+                    title: "CSS,",
+                    colorClass: "text-blue-500 dark:text-white"
                 },
                 {
-                    title: "Tailwind",
-                    colorClass: "text-teal-500"
-                },
+                    title: "VUE JS",
+                    colorClass: "text-green-500"
+                }
             ],
-            demoUrl: "https://google.com"
+            demoUrl: "https://splendorous-kulfi-f7f86d.netlify.app"
         },
         {
             image: "/assets/exp1.png",
@@ -54,31 +54,55 @@ export default function Projects() {
             tags: [
 
                 {
-                    title: "Next.js",
-                    colorClass: "text-black dark:text-white"
+                    title: "Html,",
+                    colorClass: "text-orange-500 dark:text-white"
                 },
                 {
-                    title: "React",
-                    colorClass: "text-blue-400"
+                    title: "CSS,",
+                    colorClass: "text-blue-500 dark:text-white"
                 },
                 {
-                    title: "Tailwind",
-                    colorClass: "text-teal-500"
+                    title: "LARAVEL",
+                    colorClass: "text-red-500"
                 },
             ],
-            demoUrl: "https://google.com"
+            demoUrl: "https://alfajri.so"
         },
         {
             image: "/assets/exp3.png",
             title: t("projects_items.qanuni.title"),
             description: t("projects_items.qanuni.desc"),
             tags: [
+                {
+                    title: "Html,",
+                    colorClass: "text-orange-500 dark:text-white"
+                },
+                {
+                    title: "VUE JS",
+                    colorClass: "text-green-500"
+                },
 
+                {
+                    title: "LARAVEL",
+                    colorClass: "text-red-500"
+                },
+            ],
+            demoUrl: "https://alqanoni.com/"
+        },
+        {
+            image: "/assets/exp1.png",
+            title: t("projects_items.freelancer.title"),
+            description: t("projects_items.freelancer.desc"),
+            tags: [
+                {
+                    title: "React JS",
+                    colorClass: "text-blue-500 dark:text-white"
+                },
+                
                 {
                     title: "Next.js",
                     colorClass: "text-black dark:text-white"
                 },
-
                 {
                     title: "Tailwind",
                     colorClass: "text-teal-500"
@@ -101,8 +125,8 @@ export default function Projects() {
                             <div className="flex flex-wrap gap-2">
                                 {item.tags.map((tag, tagIndex) => <span className={`text-xs ${tag.colorClass} capitalize`} key={tagIndex}>#{tag.title}</span>)}
                             </div>
-                            {item.demoUrl && <a className="flex mt-2 w-fit  rounded-sm border text-gray-700 dark:text-gray-200 gap-x-1 py-1 px-2 transition-colors hover:text-white hover:bg-purple-600 " href={item.demoUrl} target="_blank" rel="noopener noreferrer">
-                                <FaAirbnb className="text-sm" />
+                            {item.demoUrl && <a className="flex mt-2 w-fit  rounded-sm border border-gray-400 text-gray-600 dark:text-gray-200 gap-x-1 py-1 px-2 transition-colors hover:text-white hover:bg-blue-700 " href={item.demoUrl} target="_blank" rel="noopener noreferrer">
+                                <BiShow className="text-sm" />
                                 <span className="text-xs">Demo</span>
                             </a>}
                         </BaseCard>

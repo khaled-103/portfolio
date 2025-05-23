@@ -1,34 +1,55 @@
 {
-    "home":"home",
-    "about_me":"about me",
-    "about_desc":"Front-end developer turning ideas into seamless, interactive web experiences. I blend design and code to craft user-friendly interfaces. My passion for coding drives me to create dynamic and engaging digital experiences.",
-    "projects":"Projects",
-    "download_cv":"download cv",
-    "hi_i_am":"hi i am",
-    "khaled_ali":"khaled sheikh ali",
-    "frontend":"frontend developer",
-    "intro_desc":"web developer with over two years of experience in building high-quality and advanced web applications",
-    "contact_me":"contact me",
-    "education":"education",
-    "computer_engineer":"computer engineer",
-    "years":"{count} years",
-    "completed":"{count} completed",
-    "opportunities":"opportunities",
-    "open_to_work":"open to work",
-    "advanced":"advanced",
-    "intermdeiate":"intermdeiate",
-    "skills":"skills",
-    "rights_reserved":"all rights reserved",
-    "experience":"experience",
-    "trillium_soft":"Trillium Soft",
-    "web_dev":"Web Developer",
-    "freelancer":"Freelancer",
-    "palestine":"palestine ",
-    "gaza":"gaza",
-    "online":"online",
-    "name":"name",
-    "email":"email",
-    "send":"send",
-    "message":"message"
-    
+  "home": "home",
+  "about_me": "about me",
+  "about_desc": "Front-end developer with a passion for transforming ideas into seamless, interactive web experiences. I combine aesthetic design with clean, efficient code to build intuitive, user-friendly interfaces. Driven by a love for coding and a commitment to excellence, I create dynamic and engaging digital experiences that prioritize both functionality and visual appeal.",
+  "projects": "Projects",
+  "download_cv": "download cv",
+  "hi_i_am": "hi i am",
+  "khaled_ali": "khaled sheikh ali",
+  "frontend": "frontend developer",
+  "intro_desc": "web developer with over two years of experience in building high-quality and advanced web applications",
+  "contact_me": "contact me",
+  "education": "education",
+  "computer_engineer": "computer engineer",
+  "years": "{count} years",
+  "completed": "{count} completed",
+  "opportunities": "opportunities",
+  "open_to_work": "open to work",
+  "advanced": "advanced",
+  "intermdeiate": "intermdeiate",
+  "skills": "skills",
+  "rights_reserved": "all rights reserved",
+  "experience": "experience",
+  "trillium_soft": "Trillium Soft",
+  "web_dev": "Web Developer",
+  "freelancer": "Freelancer",
+  "palestine": "palestine ",
+  "gaza": "gaza",
+  "online": "online",
+  "name": "name",
+  "email": "email",
+  "send": "send",
+  "message": "message",
+  "projects_items": {
+    "e_learning": {
+      "title": "E-learning Platform",
+      "desc": "Developed and launched a comprehensive E-learning platform that offers a diverse catalog of online courses. Designed an intuitive and user-friendly interface to enhance learner engagement, facilitated interactive learning experiences, and collaborated closely with instructors to ensure high-quality content delivery. Prioritized responsive design and seamless functionality across all devices to provide an accessible and consistent user experience."
+    },
+    "aptu": {
+      "title": "APTU Interfaces Website",
+      "desc": "Aptu is a sophisticated, multi-interface web platform designed to deliver a seamless and engaging user experience. It features well-structured sections including Home, About, Features, Subscriptions, and Support—each crafted with a user-centric approach. With a focus on intuitive navigation, integrated functionality, and fully responsive design, Aptu provides a comprehensive digital solution that enables users to interact with the system effortlessly and efficiently."
+    },
+    "alfajri": {
+      "title": "Alfajri Ecommerce",
+      "desc": "Revamped the login and registration system along with its user interface to improve functionality and user experience. Redesigned the UI across multiple pages, incorporating Swiper sliders to enhance visual appeal and interactivity, resulting in a more engaging and intuitive user experience."
+    },
+    "qanuni": {
+      "title": "Al qanuni website",
+      "desc": "The website features multiple integrated modules, including an article publishing section, a user discussion forum, and a dedicated area for file sharing among members. It also includes an exam module where users can take tests and view their results. Additionally, the platform supports real-time communication through a built-in chat system, fostering interaction and collaboration between users."
+    },
+    "freelancer": {
+      "title": "Freelancer works",
+      "desc": "As a freelancer, I have contributed to a wide range of web projects, including news platforms and e-commerce stores. My work has involved integrating secure payment systems, optimizing websites for responsiveness and SEO, and refining user interfaces to enhance overall user experience. Additionally, I have strong experience in developing RESTful APIs, integrating third-party services, and managing relational databases effectively"
+    }
+  }
 }

@@ -16,7 +16,7 @@ export default function AboutMe() {
     return (
         <SectionContainer title={t('about_me')}>
             <p className="text-gray-600 text-base text-justify dark:text-gray-200 mb-5">{t('about_desc')}</p>
-            <div className="grid grid-cols-12 gap-1 ">
+            <div className="grid grid-cols-12 md:gap-3 gap-2 ">
                 <AboutCard icon={<IoSchoolOutline className="dark:text-white mx-auto text-gray-700 text-2xl"/>} title={t('education')} desc={t('computer_engineer')} />
                 <AboutCard icon={<LuShoppingBag className="dark:text-white mx-auto text-gray-700 text-2xl"/>} title={t('experience')} desc={t('years',{count:"+2"})} />
                 <AboutCard icon={<MdWorkspacePremium className="dark:text-white mx-auto text-gray-700 text-2xl"/>} title={t('projects')} desc={t('completed', {count:"+10"})} />
@@ -28,7 +28,7 @@ export default function AboutMe() {
 
 function AboutCard({ icon, title, desc }: { icon: ReactNode, title: string, desc: string }) {
     return (
-        <BaseCard className="sm:col-span-3 md:col-span-2 text-center col-span-4">
+        <BaseCard className="relative sm:col-span-3 lg:col-span-2 text-center col-span-4">
             {icon}
             <h4 className="capitalize mt-3 mb-1 dark:text-white text-gray-700">{title}</h4>
             <span className="capitalize text-center text-[.72rem] font-extralight dark:text-gray-200 text-gray-500">{desc}</span>

@@ -1,30 +1,14 @@
 import { useTranslations } from "next-intl";
-import { FaFacebookF,FaGithub,FaInstagram,FaLinkedinIn } from "react-icons/fa";
+import SocialMedia from "./SocialMedia";
 export default function Footer() {
   const t = useTranslations();
-  const socialMedia = [
-    { icon: FaFacebookF, link: "https://facebook.com",className:"hover:text-blue-600" },
-    { icon: FaGithub, link: "https://github.com" ,className:"hover:text-gray-500"},
-    { icon: FaLinkedinIn, link: "https://linkedin.com",className:"hover:text-blue-600" },
-    { icon: FaInstagram, link: "https://instagram.com",className:"hover:text-red-600" },
-  ];
-
   return (
-    <footer className="py-3 border-t border-gray-600">
+    <footer className="py-6">
+     
       <div className="flex justify-center space-x-4">
-        {socialMedia.map((social, index) => (
-          <a
-            key={index}
-            href={social.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 dark:text-gray-400"
-          >
-            {<social.icon className={social.className}/>}
-          </a>
-        ))}
+        <SocialMedia/>
       </div>
-      <p className="mt-4 text-center text-gray-600 dark:text-gray-400">
+      <p className="mt-4 text-center text-gray-600 dark:text-gray-300">
         &copy; {new Date().getFullYear()} {t('rights_reserved')}.
       </p>
     </footer>

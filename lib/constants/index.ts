@@ -1,5 +1,4 @@
 export const DEFAULT_THEME = "dark";
-
 export const DEFAULT_LANG = "en";
 export const LANGUAGES = {
     "en":{
@@ -11,15 +10,6 @@ export const LANGUAGES = {
         supportRtl: true
     }
 };
+export const navLinks = ['home','skills','projects','experience','contact_me'];
 
-export enum STATUS_FETCH{
-    SUCCESS,
-    VALIDATION_ERROR,
-    AUTHNITICATE_ERROR,
-    AUTHORIZE_ERROR,
-    GENERAL_ERROR
-}
-
-export const SESSION_EXPIRE_IN = 1000*60*10; // MUST GREATER THAN 2 MINUTES
-export const SESSION_REFRESH_IN = SESSION_EXPIRE_IN - 1000*60*2;
 

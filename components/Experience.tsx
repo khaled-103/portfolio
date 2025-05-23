@@ -13,10 +13,10 @@ export default function Experience() {
   ];
 
   return (
-    <SectionContainer title={t('experience')}>
+    <SectionContainer id="experience" title={t('experience')}>
       <div className="relative md:pe-12 w-fit flex gap-x-8 sm:gap-x-20 md:gap-x-32 border-b-2 border-gray-600 dark:border-gray-200">
         {experiences.map((exp, index) => (
-          <div key={index} className="py-6  space-y-2 relative">
+          <div key={index} className="pb-6 space-y-2 relative">
             <div className="absolute -bottom-[.85rem] w-3 h-3 rounded-[50%] dark:bg-main-dark bg-white border-gray-600 dark:border-gray-200 border-2"></div>
             <h3 className="text-lg mb-4 font-medium text-center py-0.5 bg-gradient-to-r  from-teal-800 to-purple-800 text-white rounde-sm">
               {exp.title}

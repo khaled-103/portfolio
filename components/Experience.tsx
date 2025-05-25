@@ -17,7 +17,7 @@ export default function Experience() {
       <div className="relative md:pe-12 w-fit flex gap-x-8 sm:gap-x-20 md:gap-x-32 border-b-2 border-gray-600 dark:border-gray-200">
         {experiences.map((exp, index) => (
           <div key={index} className="pb-6 space-y-2 relative">
-            <div className="absolute -bottom-[.85rem] w-3 h-3 rounded-[50%] dark:bg-main-dark bg-white border-gray-600 dark:border-gray-200 border-2"></div>
+            <div className="absolute -bottom-[.88rem] w-3 h-3 rounded-[50%] dark:bg-main-dark bg-white border-gray-600 dark:border-gray-200 border-2"></div>
             <h3 className="text-lg mb-4 font-medium text-center py-0.5 bg-gradient-to-r  from-teal-800 to-purple-800 text-white rounde-sm">
               {exp.title}
             </h3>
@@ -35,7 +35,7 @@ export default function Experience() {
             </div>
           </div>
         ))}
-        <MdOutlineKeyboardArrowRight className="absolute -bottom-[.659rem] -end-[.6rem]  text-xl dark:text-white text-main-dark rtl:rotate-180" />
+        <MdOutlineKeyboardArrowRight className="absolute -bottom-[.665rem] -end-[.6rem]  text-xl dark:text-white text-main-dark rtl:rotate-180" />
       </div>
     </SectionContainer>
   );

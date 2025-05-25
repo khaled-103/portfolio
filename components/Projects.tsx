@@ -13,8 +13,8 @@ export default function Projects() {
             description: t("projects_items.e_learning.desc"),
             tags: [
                 {
-                    title: "Html,",
-                    colorClass: "text-orange-500 dark:text-white"
+                    title: "Html",
+                    colorClass: "text-orange-500 "
                 },
                 {
                     title: "VUE JS",
@@ -33,12 +33,12 @@ export default function Projects() {
             description: t("projects_items.aptu.desc"),
             tags: [
                 {
-                    title: "Html,",
-                    colorClass: "text-orange-500 dark:text-white"
+                    title: "Html",
+                    colorClass: "text-orange-500 "
                 },
                 {
-                    title: "CSS,",
-                    colorClass: "text-blue-500 dark:text-white"
+                    title: "CSS",
+                    colorClass: "text-blue-500 "
                 },
                 {
                     title: "VUE JS",
@@ -54,12 +54,12 @@ export default function Projects() {
             tags: [
 
                 {
-                    title: "Html,",
-                    colorClass: "text-orange-500 dark:text-white"
+                    title: "Html",
+                    colorClass: "text-orange-500 "
                 },
                 {
-                    title: "CSS,",
-                    colorClass: "text-blue-500 dark:text-white"
+                    title: "CSS",
+                    colorClass: "text-blue-500 "
                 },
                 {
                     title: "LARAVEL",
@@ -74,8 +74,8 @@ export default function Projects() {
             description: t("projects_items.qanuni.desc"),
             tags: [
                 {
-                    title: "Html,",
-                    colorClass: "text-orange-500 dark:text-white"
+                    title: "Html",
+                    colorClass: "text-orange-500 "
                 },
                 {
                     title: "VUE JS",
@@ -96,7 +96,7 @@ export default function Projects() {
             tags: [
                 {
                     title: "React JS",
-                    colorClass: "text-blue-500 dark:text-white"
+                    colorClass: "text-blue-500 "
                 },
                 
                 {
@@ -116,7 +116,7 @@ export default function Projects() {
             <div className="grid grid-cols-12 gap-3">
                 {items.map((item, index) => {
                     return (
-                        <BaseCard gradiant={false} className="col-span-11 sm:col-span-6  md:col-span-4 lg:col-span-3  group" key={index}>
+                        <BaseCard gradiant={false} className="col-span-11  sm:col-span-6  md:col-span-4 lg:col-span-3  group" key={index}>
                             <div className="h-40 relative transition-transform group-hover:scale-101">
                                 <Image src={item.image} alt={item.title + " photo"} fill />
                             </div>

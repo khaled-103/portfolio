@@ -30,7 +30,7 @@ function AboutCard({ icon, title, desc }: { icon: ReactNode, title: string, desc
     return (
         <BaseCard className="relative sm:col-span-3 lg:col-span-2 text-center col-span-4">
             {icon}
-            <h4 className="capitalize mt-3 mb-1 dark:text-white text-gray-700">{title}</h4>
+            <h2 className="capitalize mt-3 mb-1 dark:text-white text-gray-700">{title}</h2>
             <span className="capitalize text-center text-[.72rem] font-extralight dark:text-gray-200 text-gray-500">{desc}</span>
         </BaseCard>
     );

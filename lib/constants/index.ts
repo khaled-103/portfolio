@@ -3,11 +3,11 @@ export const DEFAULT_LANG = "en";
 export const LANGUAGES = {
     "en":{
         nativeName: "English",
-        supportRtl: false
+        direction: "ltr"
     },
     "ar":{
         nativeName: "Arabic",
-        supportRtl: true
+        direction: "rtl"
     }
 };
 export const navLinks = ['home','skills','projects','experience','contact_me'];

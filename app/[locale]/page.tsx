@@ -6,6 +6,14 @@ import HomeHeader from "@/components/HomeHeader";
 import Intro from "@/components/Intro";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+// import { Metadata } from "next";
+// export const metadata: Metadata = {
+//   alternates:{
+//     languages:{
+//       ar
+//     }
+//   }
+// };
 export default  function Home() {
 
   return (

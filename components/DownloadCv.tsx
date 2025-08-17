@@ -5,7 +5,7 @@ export default function DownloadCv() {
     const t = useTranslations();
     return (
         <BaseBtn className="animate-bounce">
-            <a download href="/assets/cv.pdf">{t('download_cv')}</a>
+            <a className="block py-1 px-2" download href="/assets/cv.pdf">{t('download_cv')}</a>
         </BaseBtn>
     );
 

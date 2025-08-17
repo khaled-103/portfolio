@@ -14,19 +14,20 @@ import Skills from "@/components/Skills";
 //     }
 //   }
 // };
-export default  function Home() {
+export default function Home() {
 
   return (
     <>
-      <HomeHeader/>
-      <main className="2xl:w-[75%] xl:w-[82%] lg:w-[88%] md:w-[90%] w-[92%] mx-auto">
-        <Intro/>
-        <AboutMe/>
-        <Skills/>
-        <Experience/>
-        <Projects/>
-        <ContactMe/>
-        <Footer/>
+      
+      <HomeHeader />
+      <main className="2xl:w-[75%] mt-16 xl:w-[82%] lg:w-[88%] md:w-[90%] w-[92%] mx-auto">
+        <Intro />
+        <AboutMe />
+        <Skills />
+        <Experience />
+        <Projects />
+        <ContactMe />
+        <Footer />
       </main>
     </>
   );

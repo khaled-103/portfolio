@@ -35,7 +35,7 @@ export default function Experience() {
             </div>
           </div>
         ))}
-        <MdOutlineKeyboardArrowRight className="absolute -bottom-[.665rem] -end-[.6rem]  text-xl dark:text-white text-main-dark rtl:rotate-180" />
+        <MdOutlineKeyboardArrowRight className="absolute -bottom-[11.2px] -end-[8.8px]  text-xl dark:text-white text-main-dark rtl:rotate-180" />
       </div>
     </SectionContainer>
   );

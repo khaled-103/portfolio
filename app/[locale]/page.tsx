@@ -20,7 +20,7 @@ export default function Home() {
     <>
       
       <HomeHeader />
-      <main className="2xl:w-[75%] mt-16 xl:w-[82%] lg:w-[88%] md:w-[90%] w-[92%] mx-auto">
+      <main className="2xl:w-[73%] mt-16 xl:w-[80%] lg:w-[86%] md:w-[88%] w-[90%] mx-auto">
         <Intro />
         <AboutMe />
         <Skills />

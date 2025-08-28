@@ -2,26 +2,27 @@ import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa
 
 export default function SocialMedia() {
     const socialMedia = [
-        { icon: FaFacebookF,desc:"facebook social link", link: "https://facebook.com", className: "hover:text-blue-500" },
-        { icon: FaGithub,desc:"github link", link: "https://github.com", className: "hover:text-gray-500" },
-        { icon: FaLinkedinIn,desc:"LinkedinIn link", link: "https://linkedin.com", className: "hover:text-blue-500" },
-        { icon: FaInstagram,desc:"Instagram social link", link: "https://instagram.com", className: "hover:text-red-500" },
-    ];
-    return (
-        <>
-            {socialMedia.map((social, index) => (
-                <a
-                    title={social.desc}
-                    about={social.desc}
-                    key={index}
-                    href={social.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-lg text-gray-600 dark:text-gray-300"
-                >
-                    {<social.icon className={social.className} />}
-                </a>
-            ))}
-        </>
-    );
+    { icon: FaGithub, desc: "GitHub", link: "https://github.com" },
+    { icon: FaLinkedinIn, desc: "LinkedIn", link: "https://linkedin.com" },
+    { icon: FaFacebookF, desc: "Twitter", link: "https://FaFacebookF.com" },
+    { icon: FaInstagram, desc: "Instagram", link: "https://instagram.com" },
+  ];
+  
+  return (
+    <div className="flex gap-4 items-center">
+      {socialMedia.map((social, index) => (
+        <a
+          key={index}
+          href={social.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          aria-label={social.desc}
+          title={social.desc}
+        >
+          <social.icon className="text-lg" />
+        </a>
+      ))}
+    </div>
+  );
 }

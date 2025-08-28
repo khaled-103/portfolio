@@ -7,23 +7,62 @@ import { Link } from "@/lib/i18n/navigation";
 export default function Intro() {
     const t = useTranslations();
     return (
-        <section id="home" className="pt-[4rem] md:justify-between  md:flex-row flex-col-reverse flex ">
-            <div className="flex  dark:text-white  text-black flex-col">
-                <span className="capitalize">{t('hi_i_am')}</span>
-                <span className="capitalize text-main">{t('khaled_ali')}</span>
-                <span className="uppercase text-2xl font-bold ">{t('frontend')}</span>
-                <p className="text-base max-w-[42rem] text-gray-600 dark:text-gray-300 my-2 font-light">{t('intro_desc')}</p>
-                <BaseBtn><Link className="block py-1 px-2" href={"#contact_me"}>{t('contact_me')}</Link></BaseBtn>
-            </div>
-            <div className="flex self-center gap-x-2 items-center">
-                <div className="flex flex-col gap-y-3 mt-2">
-                    <SocialMedia />
-                    
+        <section
+            id="home"
+            className="min-h-[60vh] flex  py-12 bg-white dark:bg-gray-900"
+        >
+            <div className=" w-full grid md:grid-cols-2 gap-8 md:gap-12 ">
+                {/* Text Content */}
+                <div className="order-2 md:order-1">
+                    <div className="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">
+                        {t('hi_i_am')}
+                    </div>
+
+                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                        <span className="text-main">{t('khaled_ali')}</span>
+                    </h1>
+
+                    <h2 className="text-xl sm:text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
+                        {t('frontend')}
+                    </h2>
+
+                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-lg">
+                        {t('intro_desc')}
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-y-4 gap-x-1">
+                        <BaseBtn className="w-full sm:w-auto">
+                            <Link href="#contact_me" className="px-6 py-3 block font-medium text-center">
+                                {t('contact_me')}
+                            </Link>
+                        </BaseBtn>
+                        <SocialMedia />
+                    </div>
                 </div>
-                <div className="relative w-56 h-56 ">
-                    <Image className="object-cover border-4 border-zinc-600 dark:border-white object-top rounded-[50%]" fill src={"/assets/developer.jpg"} alt="developer image" />
+
+                {/* Image - Optimized */}
+                <div className="order-1 md:order-2 relative w-full max-w-2xs mx-auto group">
+                    <div className="pb-[100%] relative transition-transform duration-500 hover:scale-105"> {/* 1:1 Aspect Ratio Container */}
+                        {/* Animated background elements */}
+                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-main/20 to-blue-500/20 -rotate-3 transition-all duration-500 group-hover:rotate-6 group-hover:scale-105"></div>
+                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-tl from-purple-500/10 to-pink-500/10 rotate-3 transition-all duration-500 group-hover:-rotate-6 group-hover:scale-105"></div>
+                        
+                        {/* Main image with modern styling */}
+                        <Image
+                            className="absolute rounded-2xl object-cover object-top w-full h-full border-4 border-white dark:border-gray-800 shadow-lg transition-all duration-500 group-hover:shadow-xl group-hover:border-main/20"
+                            src="/assets/developer.jpg"
+                            alt="Khaled Ali - Frontend Developer"
+                            width={288}
+                            height={288}
+                            quality={90}
+                            priority
+                        />
+                        
+                    </div>
                 </div>
             </div>
         </section>
     );
+
+
 }

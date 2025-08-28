@@ -1,8 +1,7 @@
 "use client";
-
 /* you must lazy load this component it use local storage */
 import { Theme } from "@/lib/types";
-import { useEffect, useState } from "react";
+import { useEffect , useState } from "react";
 import { DEFAULT_THEME } from "@/lib/constants";
 import { FaRegMoon } from "react-icons/fa";
 import { IoSunnyOutline } from "react-icons/io5";

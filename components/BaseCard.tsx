@@ -3,7 +3,6 @@ import { ReactNode } from "react";
 import { motion } from "framer-motion";
 
 export default function BaseCard({
-    gradiant = true,
     className = "",
     children,
 }: {
@@ -13,40 +12,39 @@ export default function BaseCard({
 }) {
     return (
         <motion.div
-            className={`${gradiant
-                    ? "transition-all duration-300 ease-in-out bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 overflow-hidden"
-                    : "border dark:border-gray-500 border-gray-300"
-                } ${className} relative rounded-lg p-[.135rem]`}
-            whileHover={{
-                boxShadow:
-                    "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-            }}
-            transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 15,
-            }}
+            className={`relative rounded-2xl overflow-hidden group transition-all duration-100 ${className}`}
+            whileHover={{ scale: 1.03 }}
+            transition={{ type: "spring", stiffness: 300, damping: 25 }}
         >
-            {gradiant && (
-                <motion.div
-                    className="absolute -top-40 -bottom-40 left-10 right-10 bg-gradient-to-r from-transparent dark:via-white/90 via-gray-600 to-transparent"
-                    animate={{
-                        rotate: [0, 360],
-                    }}
-                    transition={{
-                        duration: 8,
-                        repeat: Infinity,
-                        ease: "linear",
-                    }}
-                />
-            )}
-            <motion.div
-                className="relative z-10 rounded-lg bg-white dark:bg-main-dark py-3 md:px-3 px-2 h-full"
-                initial={{ opacity: 0.9 }}
-                whileHover={{ opacity: 1 }}
+            {/* Enhanced background with blue-orange gradient for a modern feel */}
+            <div
+                className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-100"
+                style={{
+                    background: "linear-gradient(135deg, rgba(59, 130, 246, 0.5) 0%, rgba(249, 115, 22, 0.5) 100%)",
+                }}
+            />
+
+            {/* Subtle glow effect on hover */}
+            <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-30 transition-opacity duration-100 blur-xl"
+                style={{
+                    background: "radial-gradient(circle at center, rgba(59, 130, 246, 0.6) 0%, rgba(249, 115, 22, 0.6) 100%)",
+                }}
+            />
+
+            {/* The main card content area with improved styling */}
+            <div
+                className="relative z-10 w-full h-full p-px rounded-2xl
+                border border-gray-200/80 dark:border-zinc-700/80
+                shadow-sm hover:shadow-md transition-all duration-300"
             >
-                {children}
-            </motion.div>
+                <div
+                    className="w-full h-full rounded-[calc(1rem-1px)] p-6 md:p-8
+                    
+                    flex flex-col items-center justify-center text-center"
+                >
+                    {children}
+                </div>
+            </div>
         </motion.div>
     );
 }

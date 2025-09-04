@@ -14,6 +14,8 @@ export default function ThemeToggle() {
         const savedTheme = localStorage.getItem("theme");
         if (savedTheme === "dark" || savedTheme === "light")
             handleThemeChange(savedTheme);
+        else 
+            handleThemeChange(DEFAULT_THEME);
     }, []);
     
     function handleThemeChange(theme: Theme) {

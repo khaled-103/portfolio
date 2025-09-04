@@ -10,6 +10,7 @@ export default function Intro() {
     return (
         <SectionContainer
             id="home"
+            withMotion={false}
             className="flex  py-12 bg-white dark:bg-gray-900"
         >
             <div className=" w-full grid lg:grid-cols-2 gap-8 items-center md:gap-12 ">

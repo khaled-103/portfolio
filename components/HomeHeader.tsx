@@ -48,7 +48,7 @@ export default function HomeHeader() {
                                 </a>
                             ))}
                         </nav>
-                        <DownloadCv />
+                        <DownloadCv className="animate-bounce"/>
                     </div>
 
                     {/* Mobile Sidebar */}

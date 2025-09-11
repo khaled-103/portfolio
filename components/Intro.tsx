@@ -1,16 +1,14 @@
-import BaseBtn from "./BaseBtn";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import SocialMedia from "./SocialMedia";
-import { Link } from "@/lib/i18n/navigation";
 import SectionContainer from "./SectionContainer";
+import DownloadCv from "./DownloadCv";
 
 export default function Intro() {
     const t = useTranslations();
     return (
         <SectionContainer
             id="home"
-            withMotion={false}
             className="flex  py-12 bg-white dark:bg-gray-900"
         >
             <div className=" w-full grid lg:grid-cols-2 gap-8 items-center md:gap-12 ">
@@ -20,7 +18,7 @@ export default function Intro() {
                         {t('hi_i_am')}
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                    <h1 className="text-4xl capitalize sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                         <span className="text-main">{t('khaled_ali')}</span>
                     </h1>
 
@@ -33,11 +31,12 @@ export default function Intro() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row sm:items-center gap-y-4 gap-x-1">
-                        <BaseBtn className="w-full sm:w-auto">
+                        {/* <BaseBtn className="w-full sm:w-auto">
                             <Link href="#contact_me" className="px-6 py-3 block font-medium text-center">
                                 {t('contact_me')}
                             </Link>
-                        </BaseBtn>
+                        </BaseBtn> */}
+                        <DownloadCv/>
                         <SocialMedia />
                     </div>
                 </div>

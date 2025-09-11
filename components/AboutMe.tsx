@@ -28,7 +28,7 @@ export default function AboutMe() {
             >
                 {t('about_desc')}
             </motion.p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <motion.div variants={cardVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.5 }}>
                     <AboutCard icon={<IoSchoolOutline />} title={t('education')} desc={t('computer_engineer')} />
                 </motion.div>
@@ -48,7 +48,7 @@ export default function AboutMe() {
 
 function AboutCard({ icon, title, desc }: { icon: ReactNode, title: string, desc: string }) {
     return (
-        <BaseCard className="min-h-[220px] transition-all duration-500 group">
+        <BaseCard className="h-[220px] transition-all duration-500 group">
             <div className="text-5xl mb-5 bg-gradient-to-r from-blue-500 to-orange-500 p-4 rounded-full text-white drop-shadow-lg">{icon}</div>
             <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-orange-500 group-hover:text-gray-900 dark:group-hover:text-gray-100 bg-clip-text text-transparent capitalize transition-colors duration-300">
                 {title}

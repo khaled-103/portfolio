@@ -36,7 +36,7 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning dir={LANGUAGES[locale as LanguagesKeysType].direction}>
       <body
       /*${geistSans.variable} ${geistMono.variable}*/
-        className={`${popions.variable} dark:bg-[radial-gradient(#1E293B_1px,transparent_1px)] bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] antialiased bg-white dark:bg-gray-900 min-h-screen bg-[size:20px_20px]`}
+        className={`${popions.variable} dark:bg-[radial-gradient(#1e293B_1px,transparent_1px)] bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] antialiased bg-white dark:bg-gray-900 min-h-screen bg-[size:20px_20px]`}
       >
         <script
           dangerouslySetInnerHTML={{

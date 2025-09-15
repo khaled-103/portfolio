@@ -65,7 +65,7 @@ export default function Skills() {
 
   return (
     <SectionContainer id="skills" title={t("skills")}>
-      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-y-8 gap-x-4">
         {Object.entries(skillsByCategory).map(([category, skills], categoryIndex) => (
           <motion.div
             key={categoryIndex}
@@ -75,7 +75,7 @@ export default function Skills() {
             viewport={{ once: true }}
             className="relative rounded-2xl border border-gray-200 dark:border-gray-700 
                        bg-gradient-to-br from-white/70 to-gray-100/50 dark:from-gray-900/70 dark:to-gray-800/50 
-                       shadow-lg backdrop-blur-xl p-6 hover:shadow-2xl transition-all duration-300"
+                       shadow-lg p-6 hover:shadow-2xl transition-all duration-300"
           >
             {/* Category Title */}
             <h3 className="text-2xl font-bold mb-6 capitalize text-gray-800 dark:text-gray-100 relative w-fit">
@@ -96,7 +96,7 @@ export default function Skills() {
                   <div className=" p-3 rounded-[50%] bg-gradient-to-tr from-gray-400/30 to-gray-600/30 dark:from-gray-500/20 dark:to-gray-700/20 shadow-inner">
                     {skill.icon}
                   </div>
-                  <div>
+                  <div className="flex flex-col justify-center">
                     <span className="font-semibold text-gray-800 dark:text-gray-200">
                       {skill.name}
                     </span>

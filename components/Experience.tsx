@@ -1,44 +1,113 @@
+"use client";
+import { motion } from "framer-motion";
 import { GiPositionMarker } from "react-icons/gi";
 import SectionContainer from "./SectionContainer";
 import { useTranslations } from "next-intl";
-import { MdOutlineKeyboardArrowRight, MdOutlineWorkHistory } from "react-icons/md";
+import { MdOutlineWorkHistory } from "react-icons/md";
 import { BsCalendarDate } from "react-icons/bs";
 
 export default function Experience() {
   const t = useTranslations();
 
   const experiences = [
-    { title: t('trillium_soft'), date: "2022 - 2024", duration: t('years', { count: "+2" }), role: t('web_dev'), site: t('palestine') + t('gaza') },
+    { title: t('trillium_soft'), date: "2022 - 2024", duration: t('years', { count: "+2" }), role: t('web_dev'), site: t('palestine') + " - " + t('gaza') },
     { title: t("freelancer"), date: "2022 - 2024", duration: t('years', { count: "+2" }), role: t("web_dev"), site: t("online") },
   ];
-
   return (
-    <SectionContainer id="experience" title={t('experience')}>
-      <div className="relative md:pe-12 w-fit flex gap-x-8 sm:gap-x-20 md:gap-x-32 border-b-2 border-gray-600 dark:border-gray-200">
+    <SectionContainer className="relative" id="experience" title={t("experience")}>
+      <div className="relative border-s-4 border-gray-300 dark:border-gray-600 ms-4">
         {experiences.map((exp, index) => (
-          <div key={index} className="pb-6 space-y-2 relative">
-            <div className="absolute -bottom-[.88rem] w-3 h-3 rounded-[50%] dark:bg-main-dark bg-white border-gray-600 dark:border-gray-200 border-2"></div>
-            <h3 className="text-lg mb-4 font-medium text-center py-0.5 bg-gradient-to-r  from-teal-800 to-purple-800 text-white rounde-sm">
-              {exp.title}
-            </h3>
-            <div className="flex gap-x-2">
-              <MdOutlineWorkHistory className="text-yellow-500 text-lg" />
-              <p className="text-gray-600 dark:text-gray-200">{exp.role}</p>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: true }}
+            className="relative mb-10 ms-6"
+          >
+            {/* Timeline Dot */}
+            <span className="absolute -start-9 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-tr from-teal-500 to-purple-600 ring-4 ring-white dark:ring-gray-900 shadow-lg">
+            </span>
+
+            {/* Experience Card */}
+           <div className="rounded-2xl border border-gray-200 dark:border-none bg-white/70 dark:bg-gray-800/60 backdrop-blur-md shadow-md p-6 hover:shadow-lg transition">
+              <h3 className="text-lg font-semibold bg-gradient-to-r from-teal-600 to-purple-600 text-transparent bg-clip-text">
+                {exp.title}
+              </h3>
+
+              <div className="mt-3 space-y-3 text-sm text-gray-700 dark:text-gray-300">
+                <div className="flex items-center gap-2">
+                  <MdOutlineWorkHistory className="text-yellow-500 text-lg" />
+                  <p>{exp.role}</p>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <GiPositionMarker className="text-teal-500 text-lg" />
+                  <span className="capitalize">{exp.site}</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <BsCalendarDate className="text-red-500 text-lg" />
+                  <p>{exp.date} • {exp.duration}</p>
+                </div>
+              </div>
             </div>
-            <div className="flex gap-x-2">
-              <GiPositionMarker className="text-teal-500 text-lg" />
-              <span className="capitalize text-gray-600 dark:text-gray-200">{exp.site}</span>
-            </div>
-            <div className="flex gap-x-2">
-              <BsCalendarDate className="text-lg text-red-500" />
-              <p className="text-sm text-gray-600 dark:text-gray-200">{exp.date}</p>
-            </div>
-          </div>
+          </motion.div>
         ))}
-        <MdOutlineKeyboardArrowRight className="absolute -bottom-[11.2px] -end-[8.8px]  text-xl dark:text-white text-main-dark rtl:rotate-180" />
+
+        {/* Arrow at the end */}
+        {/* <div className="absolute -bottom-3 -start-0.5 transform -translate-x-1/2">
+          <MdOutlineKeyboardArrowDown className="text-3xl text-blue-400" />
+        </div> */}
       </div>
     </SectionContainer>
   );
 }
 
+    // <SectionContainer className="relative" id="experience" title={t("experience")}>
+    //   <div className="relative border-l-4 border-gray-300 dark:border-gray-600 ml-4">
+    //     {experiences.map((exp, index) => (
+    //       <motion.div
+    //         key={index}
+    //         initial={{ opacity: 0, x: -40 }}
+    //         whileInView={{ opacity: 1, x: 0 }}
+    //         transition={{ duration: 0.6, delay: index * 0.2 }}
+    //         viewport={{ once: true }}
+    //         className="relative mb-10 ml-6"
+    //       >
+    //         {/* Timeline Dot */}
+    //         <span className="absolute -left-9 flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-tr from-teal-500 to-purple-600 ring-4 ring-white dark:ring-gray-900 shadow-lg">
+    //         </span>
 
+    //         {/* Experience Card */}
+    //         <div className="rounded-2xl border border-gray-200 dark:border-none bg-white/70 dark:bg-gray-800/60 backdrop-blur-md shadow-md p-6 hover:shadow-lg transition">
+    //           <h3 className="text-lg font-semibold bg-gradient-to-r from-teal-600 to-purple-600 text-transparent bg-clip-text">
+    //             {exp.title}
+    //           </h3>
+
+    //           <div className="mt-3 space-y-3 text-sm text-gray-700 dark:text-gray-300">
+    //             <div className="flex items-center gap-2">
+    //               <MdOutlineWorkHistory className="text-yellow-500 text-lg" />
+    //               <p>{exp.role}</p>
+    //             </div>
+
+    //             <div className="flex items-center gap-2">
+    //               <GiPositionMarker className="text-teal-500 text-lg" />
+    //               <span className="capitalize">{exp.site}</span>
+    //             </div>
+
+    //             <div className="flex items-center gap-2">
+    //               <BsCalendarDate className="text-red-500 text-lg" />
+    //               <p>{exp.date} • {exp.duration}</p>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </motion.div>
+    //     ))}
+    //   </div>
+    //   <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
+    //       <MdOutlineKeyboardArrowDown className="text-3xl text-teal-500 animate-bounce dark:text-purple-400" />
+    //     </div>
+    // </SectionContainer>
+//   );
+// }

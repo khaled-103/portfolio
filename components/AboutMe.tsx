@@ -48,12 +48,30 @@ export default function AboutMe() {
 
 function AboutCard({ icon, title, desc }: { icon: ReactNode, title: string, desc: string }) {
     return (
-        <BaseCard className="h-[220px] transition-all duration-500 group">
-            <div className="text-5xl mb-5 bg-gradient-to-r from-blue-500 to-orange-500 p-4 rounded-full text-white drop-shadow-lg">{icon}</div>
-            <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-orange-500 group-hover:text-gray-900 dark:group-hover:text-gray-100 bg-clip-text text-transparent capitalize transition-colors duration-300">
+        <BaseCard className="h-[240px] transition-all duration-500 group">
+            {/* أيقونة عصرية بتدرج */}
+            <div className="text-5xl mb-5 
+                bg-gradient-to-br from-blue-500 to-orange-400 
+                p-4 rounded-2xl text-white shadow-md group-hover:shadow-lg">
+                {icon}
+            </div>
+
+            {/* العنوان */}
+            <h3 className="text-xl font-bold mb-3 
+                bg-gradient-to-r from-blue-600 to-orange-500 
+                bg-clip-text text-transparent dark:text-white capitalize transition-transform duration-300
+                group-hover:scale-105">
                 {title}
             </h3>
-            <p className="capitalize text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-gray-100 font-medium max-w-xs transition-colors duration-300">{desc}</p>
+
+            {/* الوصف */}
+            <p className="capitalize text-sm 
+                text-gray-700 dark:text-gray-300 
+                group-hover:text-gray-900 dark:group-hover:text-gray-100 
+                font-medium max-w-xs transition-colors duration-300 leading-relaxed">
+                {desc}
+            </p>
+        
         </BaseCard>
     );
 }

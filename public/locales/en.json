@@ -32,6 +32,7 @@
   "email": "email",
   "send": "send",
   "message": "message",
+  "demo":"live demo",
   "projects_items": {
     "e_learning": {
       "title": "E-learning Platform",
@@ -43,7 +44,15 @@
     },
     "alfajri": {
       "title": "Alfajri Ecommerce",
-      "desc": "Revamped the login and registration system along with its user interface to improve functionality and user experience. Redesigned the UI across multiple pages, incorporating Swiper sliders to enhance visual appeal and interactivity, resulting in a more engaging and intuitive user experience."
+      "desc": "Revamped the login and registration system for improved functionality and user experience. Redesigned multiple pages with a modern UI and integrated Swiper sliders to enhance interactivity and visual appeal."
+    },
+    "anhargo": {
+      "title": "Anhaar agro Ecommerce",
+      "desc": "Revamped the login and registration system for improved functionality and user experience. Redesigned multiple pages with a modern UI and integrated Swiper sliders to enhance interactivity and visual appeal."
+    },
+    "stc": {
+      "title": "Training Certificates System & STC Site",
+      "desc": "Built a system for issuing electronic training certificates with QR verification and an easy-to-use admin panel, along with a responsive company website showcasing services and news."
     },
     "qanuni": {
       "title": "Al qanuni website",

@@ -11,7 +11,7 @@ export default function Experience() {
 
   const experiences = [
     { title: t('trillium_soft'), date: "2022 - 2024", duration: t('years', { count: "+2" }), role: t('web_dev'), site: t('palestine') + " - " + t('gaza') },
-    { title: t("freelancer"), date: "2022 - 2024", duration: t('years', { count: "+2" }), role: t("web_dev"), site: t("online") },
+    { title: t("freelancer"), date: "2022 - 2025", duration: t('years', { count: "+3" }), role: t("web_dev"), site: t("online") },
   ];
   return (
     <SectionContainer className="relative" id="experience" title={t("experience")}>

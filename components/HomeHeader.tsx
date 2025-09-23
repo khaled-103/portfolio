@@ -10,7 +10,7 @@ export default function HomeHeader() {
     const t = useTranslations();
     return (
         <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-md z-50 fixed top-0 inset-x-0">
-            <div className="2xl:w-[73%] xl:w-[80%] lg:w-[86%] md:w-[88%] w-[90%] mx-auto py-3">
+            <div className="2xl:w-[75%] xl:w-[82%] lg:w-[88%] md:w-[90%] w-[92%] mx-auto py-3">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center space-x-3 rtl:space-x-reverse">
                         {/* Logo with animation */}
@@ -52,9 +52,7 @@ export default function HomeHeader() {
                     </div>
 
                     {/* Mobile Sidebar */}
-                    <SideBarHeader>
-                        <DownloadCv />
-                    </SideBarHeader>
+                    <SideBarHeader/>
                 </div>
             </div>
         </header>

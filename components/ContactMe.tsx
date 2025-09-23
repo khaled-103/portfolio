@@ -1,7 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
 import SectionContainer from "./SectionContainer";
-import BaseBtn from "./BaseBtn";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -14,7 +13,7 @@ export default function ContactMe() {
   return (
     <SectionContainer id="contact_me" title={t("contact_me")}>
       <div className="flex flex-col md:flex-row gap-10 items-center md:items-stretch max-w-6xl mx-auto">
-        
+
         {/* Contact Info Section */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -37,15 +36,15 @@ export default function ContactMe() {
             </div>
             <div className="flex items-center gap-3 text-gray-700 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-300">
               <FaPhone className="text-2xl text-green-500" />
-              <span className="text-base">{contactInfo.phone}</span>
+              <span className="text-base" dir="ltr">{contactInfo.phone}</span>
             </div>
             <div className="flex items-center gap-3 text-gray-700 dark:text-gray-200 hover:text-red-600 dark:hover:text-red-400 transition-colors duration-300">
               <FaMapMarkerAlt className="text-2xl text-red-500" />
-              <span className="text-base">{t(contactInfo.city)}, {t(contactInfo.country)}</span>
+              <span className="text-base capitalize">{t(contactInfo.city)}, {t(contactInfo.country)}</span>
             </div>
           </div>
 
-          <SocialMedia/>
+          <SocialMedia />
         </motion.div>
 
         {/* Contact Form Section */}
@@ -54,32 +53,69 @@ export default function ContactMe() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="md:w-1/2 w-full p-6 rounded-2xl shadow-lg bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-900 border border-gray-200 dark:border-gray-700"
+          className="md:w-1/2 w-full p-6 rounded-2xl shadow-lg bg-gradient-to-br bg-white dark:from-gray-800 dark:to-gray-900 border border-gray-200 dark:border-gray-700"
         >
-          <form className="space-y-6">
-            <input
-              required
-              type="text"
-              placeholder={t("name")}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-400 transition-all duration-300 bg-white dark:bg-gray-700 dark:text-gray-100"
-            />
-            <input
-              required
-              type="email"
-              placeholder={t("email")}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-400 transition-all duration-300 bg-white dark:bg-gray-700 dark:text-gray-100"
-            />
-            <textarea
-              required
-              placeholder={t("message")}
-              rows={6}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-400 transition-all duration-300 bg-white dark:bg-gray-700 dark:text-gray-100"
-            />
+          <form className="space-y-6 p-8 rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-white/70 to-gray-100/70 dark:from-gray-900/70 dark:to-gray-800/70 backdrop-blur-xl">
+            {/* Name */}
+            <div className="relative">
+              <input
+                type="text"
+                id="name"
+                required
+                placeholder=" "
+                className="peer w-full px-4 pt-6 pb-2 rounded-2xl border border-gray-300 dark:border-gray-600 bg-transparent shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400 transition-all duration-300 text-gray-900 dark:text-gray-100"
+              />
+              <label
+                htmlFor="name"
+                className="absolute start-4 top-2 text-gray-500 dark:text-gray-400 text-sm transition-all duration-300 peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-500"
+              >
+                {t("name")}
+              </label>
+            </div>
 
-            <BaseBtn className="w-full py-3 px-6 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 hover:opacity-90 shadow-lg transition-all duration-300 transform hover:scale-[1.02]">
+            {/* Email */}
+            <div className="relative">
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder=" "
+                className="peer w-full px-4 pt-6 pb-2 rounded-2xl border border-gray-300 dark:border-gray-600 bg-transparent shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400 transition-all duration-300 text-gray-900 dark:text-gray-100"
+              />
+              <label
+                htmlFor="email"
+                className="absolute start-4 top-2 text-gray-500 dark:text-gray-400 text-sm transition-all duration-300 peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-500"
+              >
+                {t("email")}
+              </label>
+            </div>
+
+            {/* Message */}
+            <div className="relative">
+              <textarea
+                id="message"
+                required
+                placeholder=" "
+                rows={5}
+                className="peer w-full px-4 pt-6 pb-2 rounded-2xl border border-gray-300 dark:border-gray-600 bg-transparent shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400 transition-all duration-300 text-gray-900 dark:text-gray-100 resize-none"
+              />
+              <label
+                htmlFor="message"
+                className="absolute start-4 top-2 text-gray-500 dark:text-gray-400 text-sm transition-all duration-300 peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-500"
+              >
+                {t("message")}
+              </label>
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-full py-3 px-6 rounded-2xl font-semibold text-white bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.03] active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-blue-300"
+            >
               {t("send")}
-            </BaseBtn>
+            </button>
           </form>
+
         </motion.div>
       </div>
     </SectionContainer>

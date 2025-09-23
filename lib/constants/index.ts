@@ -14,7 +14,7 @@ export const navLinks = ['home','skills','projects','experience','contact_me'];
 
 export const contactInfo = {
     "email":"20khaled2001@gmail.com",
-    "phone":"972598210015",
+    "phone":"+972 59-821-0015",
     "country":"palestine",
     "city":"gaza"
 };

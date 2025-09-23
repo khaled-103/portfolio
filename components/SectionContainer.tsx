@@ -8,7 +8,7 @@ export default function SectionContainer({
     children,
 }: ComponentProps<"section"> & { title?: string; children: ReactNode }) {
     return (
-        <div id={id} className="min-h-[25vh] my-24 flex flex-col justify-center">
+        <div id={id} className="min-h-[20vh] my-24 flex flex-col justify-center">
             <motion.section
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }} // الباقي بالـ viewport

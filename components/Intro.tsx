@@ -26,16 +26,11 @@ export default function Intro() {
                         {t('web_developer')}
                     </h2>
 
-                    <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl">
+                    <p className="text-base  sm:text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed  md:max-w-3xl">
                         {t('intro_desc')}
                     </p>
 
                     <div className="flex flex-col sm:flex-row sm:items-center gap-y-4 gap-x-1">
-                        {/* <BaseBtn className="w-full sm:w-auto">
-                            <Link href="#contact_me" className="px-6 py-3 block font-medium text-center">
-                                {t('contact_me')}
-                            </Link>
-                        </BaseBtn> */}
                         <DownloadCv/>
                         <SocialMedia />
                     </div>

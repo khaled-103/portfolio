@@ -1,10 +1,10 @@
 import { Link } from "@/lib/i18n/navigation";
 import LanguageSwitch from "./LanguageSwitch";
-import SideBarHeader from "./SideBarHeader";
 import ThemeToggle from "./ThemeToggle";
 import { useTranslations } from "next-intl";
 import { navLinks } from "@/lib/constants";
 import DownloadCv from "./DownloadCv";
+import SideBarHeader from "./SideBarHeader";
 
 export default function HomeHeader() {
     const t = useTranslations();
@@ -16,14 +16,11 @@ export default function HomeHeader() {
                         {/* Logo with animation */}
                         <Link
                             href="/"
-                            className="py-2 px-4 text-white rounded-full bg-main text-2xl font-bold 
-                            relative overflow-hidden group
-                            transition-all duration-300 shadow-lg hover:scale-110
-                            shadow-main/50 dark:shadow-main/30 hover:shadow-main/70"
+                            aria-label="Go to homepage"
+                            className="relative py-2 px-4 text-white font-bold text-2xl rounded-full bg-main overflow-hidden group shadow-lg transition-transform duration-300 hover:scale-110 shadow-main/50 dark:shadow-main/30 hover:shadow-main/70"
                         >
                             <span className="relative z-10">K</span>
-                            <span className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 
-                            transition-transform duration-300 origin-left"></span>
+                            <span className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                         </Link>
 
                         {/* Language and theme switchers */}
@@ -34,7 +31,7 @@ export default function HomeHeader() {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <div className="md:flex md:items-baseline md:space-x-4 hidden">
+                    <div className="lg:flex lg:items-baseline lg:space-x-4 hidden">
                         <nav className="flex space-x-4 items-center">
                             {navLinks.map((link) => (
                                 <a
@@ -48,11 +45,11 @@ export default function HomeHeader() {
                                 </a>
                             ))}
                         </nav>
-                        <DownloadCv className="animate-bounce"/>
+                        <DownloadCv className="animate-bounce" />
                     </div>
 
                     {/* Mobile Sidebar */}
-                    <SideBarHeader/>
+                    <SideBarHeader />
                 </div>
             </div>
         </header>

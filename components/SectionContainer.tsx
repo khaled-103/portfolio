@@ -10,10 +10,10 @@ export default function SectionContainer({
     return (
         <div id={id} className="min-h-[20vh] my-24 flex flex-col justify-center">
             <motion.section
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }} // الباقي بالـ viewport
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1}} 
                 viewport={{ once: true, amount: "some" }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.5 }}
             >
                 {title && (
                     <motion.h2
@@ -28,10 +28,10 @@ export default function SectionContainer({
                     </motion.h2>
                 )}
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0,y:20 }}
+                    whileInView={{ opacity: 1 ,y:0}}
                     viewport={{ once: true, amount: "some" }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
                 >
                     {children}
                 </motion.div>

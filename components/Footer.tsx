@@ -3,7 +3,7 @@ import SocialMedia from "./SocialMedia";
 export default function Footer() {
   const t = useTranslations();
   return (
-    <footer className="py-10">
+    <footer className="py-8">
 
       <div className="flex justify-center space-x-4">
         <SocialMedia />

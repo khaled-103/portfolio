@@ -1,68 +1,69 @@
 {
-  "home": "home",
-  "about_me": "about me",
-  "about_desc": "Front-end developer with a passion for transforming ideas into seamless, interactive web experiences. I combine aesthetic design with clean, efficient code to build intuitive, user-friendly interfaces. Driven by a love for coding and a commitment to excellence, I create dynamic and engaging digital experiences that prioritize both functionality and visual appeal.",
+  "home": "Home",
+  "about_me": "About Me",
+  "about_desc": "I'm a Web developer passionate about transforming ideas into smooth, interactive web experiences. I combine aesthetic design with clean, efficient code to create intuitive and user-friendly interfaces. With a focus on both functionality and visual appeal, I build engaging digital experiences that leave a lasting impression.",
   "projects": "Projects",
-  "download_cv": "download cv",
-  "hi_i_am": "hi i am",
-  "khaled_ali": "khaled sheikh ali",
-  "frontend": "frontend developer",
-  "web_developer": "web developer",
-  "intro_desc": "Driven web developer with a proven track record of two-plus years building robust and scalable web applications. I specialize in turning complex ideas into seamless, high-performance digital solutions.",
-  "contact_me": "contact me",
-  "education": "education",
-  "computer_engineer": "computer engineer",
+  "download_cv": "Download CV",
+  "hi_i_am": "Hi, I am",
+  "khaled_ali": "Khaled Sheikh Ali",
+  "frontend": "Front-end Developer",
+  "web_developer": "Web Developer",
+  "intro_desc": "Motivated web developer with over two years of experience creating scalable, high-performance web applications. I specialize in turning complex ideas into seamless digital solutions that delight users and meet business goals.",
+  "contact_me": "Contact Me",
+  "education": "Education",
+  "computer_engineer": "Computer Engineer",
   "years": "{count} years",
   "completed": "{count} completed",
-  "opportunities": "opportunities",
-  "open_to_work": "open to work",
-  "advanced": "advanced",
-  "intermediate": "intermediate",
-  "basic":"basic",
-  "skills": "skills",
-  "rights_reserved": "all rights reserved",
-  "experience": "experience",
+  "opportunities": "Opportunities",
+  "open_to_work": "Open to Work",
+  "advanced": "Advanced",
+  "intermediate": "Intermediate",
+  "basic": "Basic",
+  "skills": "Skills",
+  "rights_reserved": "All rights reserved",
+  "experience": "Experience",
   "trillium_soft": "Trillium Soft",
   "web_dev": "Web Developer",
   "freelancer": "Freelancer",
-  "palestine": "palestine ",
-  "gaza": "gaza",
-  "online": "online",
-  "name": "name",
-  "email": "email",
-  "send": "send",
-  "message": "message",
-  "demo":"live demo",
+  "palestine": "Palestine",
+  "gaza": "Gaza",
+  "online": "Online",
+  "subject":"subject",
+  "name": "Name",
+  "email": "Email",
+  "send": "Send",
+  "message": "Message",
+  "demo": "Live Demo",
   "projects_items": {
     "e_learning": {
       "title": "E-learning Platform",
-      "desc": "Developed and launched a comprehensive E-learning platform that offers a diverse catalog of online courses. Designed an intuitive and user-friendly interface to enhance learner engagement, facilitated interactive learning experiences, and collaborated closely with instructors to ensure high-quality content delivery. Prioritized responsive design and seamless functionality across all devices to provide an accessible and consistent user experience."
+      "desc": "Developed a comprehensive E-learning platform offering a wide variety of online courses. Designed an intuitive interface to boost learner engagement, facilitate interactive learning, and ensure content quality in collaboration with instructors. Prioritized responsive design and seamless performance across devices."
     },
     "aptu": {
       "title": "APTU Interfaces Website",
-      "desc": "Aptu is a sophisticated, multi-interface web platform designed to deliver a seamless and engaging user experience. It features well-structured sections including Home, About, Features, Subscriptions, and Support—each crafted with a user-centric approach. With a focus on intuitive navigation, integrated functionality, and fully responsive design, Aptu provides a comprehensive digital solution that enables users to interact with the system effortlessly and efficiently."
+      "desc": "Created a sophisticated multi-interface web platform with well-structured sections like Home, About, Features, Subscriptions, and Support. Focused on intuitive navigation, seamless functionality, and responsive design, providing users a smooth and engaging experience."
     },
     "alfajri": {
       "title": "Alfajri Ecommerce",
-      "desc": "Revamped the login and registration system for improved functionality and user experience. Redesigned multiple pages with a modern UI and integrated Swiper sliders to enhance interactivity and visual appeal."
+      "desc": "Redesigned login and registration systems for better usability, revamped multiple pages with a modern UI, and enhanced interactivity using Swiper sliders for a more engaging e-commerce experience."
     },
     "anhargo": {
-      "title": "Anhaar agro Ecommerce",
-      "desc": "Revamped the login and registration system for improved functionality and user experience. Redesigned multiple pages with a modern UI and integrated Swiper sliders to enhance interactivity and visual appeal."
+      "title": "Anhaar Agro Ecommerce",
+      "desc": "Revamped the user onboarding and core pages for improved UX, redesigned the interface with a modern look, and integrated Swiper sliders to increase visual engagement and interactivity."
     },
     "stc": {
-      "title": "Training Certificates System & STC Site",
-      "desc": "Built a system for issuing electronic training certificates with QR verification and an easy-to-use admin panel, along with a responsive company website showcasing services and news."
+      "title": "Training Certificates System & STC Website",
+      "desc": "Built a robust system for issuing electronic training certificates with QR verification and an admin panel for easy management. Developed a responsive company website to showcase services, news, and updates effectively."
     },
     "qanuni": {
-      "title": "Al qanuni website",
-      "desc": "The website features multiple integrated modules, including an article publishing section, a user discussion forum, and a dedicated area for file sharing among members. It also includes an exam module where users can take tests and view their results. Additionally, the platform supports real-time communication through a built-in chat system, fostering interaction and collaboration between users."
+      "title": "Al Qanuni Website",
+      "desc": "Developed a multi-functional platform with article publishing, discussion forums, file sharing, and online exam modules. Integrated real-time chat for seamless user interaction and collaboration."
     },
     "freelancer": {
-      "title": "Freelancer works",
-      "desc": "As a freelancer, I have contributed to a wide range of web projects, including news platforms and e-commerce stores. My work has involved integrating secure payment systems, optimizing websites for responsiveness and SEO, and refining user interfaces to enhance overall user experience. Additionally, I have strong experience in developing RESTful APIs, integrating third-party services, and managing relational databases effectively"
+      "title": "Freelancer Projects",
+      "desc": "Worked on diverse web projects including news portals and e-commerce stores. Integrated secure payment systems, optimized for SEO and responsiveness, refined UI/UX, and developed RESTful APIs while managing relational databases efficiently."
     }
   },
-  "let_s_connect":"Let's Build Something Great Together",
-  "contact_description":"I'm currently open to new opportunities and collaborations. Whether you have a question, a project idea, or just want to say hello, feel free to reach out. I will do my best to get back to you as soon as possible"
+  "let_s_connect": "Let's Build Something Amazing Together",
+  "contact_description": "I'm open to new opportunities and collaborations. Whether you have a question, a project idea, or just want to say hello, feel free to reach out. I strive to respond promptly and help bring your ideas to life."
 }

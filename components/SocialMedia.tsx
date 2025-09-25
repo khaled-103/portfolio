@@ -1,3 +1,4 @@
+import { Link } from "@/lib/i18n/navigation";
 import { FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function SocialMedia() {
@@ -11,7 +12,7 @@ export default function SocialMedia() {
   return (
     <div className="flex gap-4 items-center">
       {socialMedia.map((social, index) => (
-        <a
+        <Link
           key={index}
           href={social.link}
           target="_blank"
@@ -21,7 +22,7 @@ export default function SocialMedia() {
           title={social.desc}
         >
           <social.icon className="text-lg" />
-        </a>
+        </Link>
       ))}
     </div>
   );

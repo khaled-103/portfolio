@@ -96,7 +96,7 @@ export default function Projects() {
             transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
           >
             {/* Project Image */}
-            <div className="h-48 w-full relative overflow-hidden">
+            <div className="h-72 md:h-52 w-full relative overflow-hidden">
               <Image
                 src={item.image}
                 alt={item.title + " photo"}
@@ -114,7 +114,7 @@ export default function Projects() {
                   group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {item.title}
                 </h2>
-                <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-4">
+                <p className="text-base text-gray-600 dark:text-gray-400 line-clamp-4">
                   {item.description}
                 </p>
               </div>

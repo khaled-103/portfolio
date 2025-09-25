@@ -1,9 +1,6 @@
 import { DEFAULT_THEME } from "./constants";
 import { Theme } from "./types";
 
-
-
-
 function isValidTheme(value: unknown): boolean {
     return value === "light" || value === "dark";
 }

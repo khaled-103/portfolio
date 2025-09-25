@@ -13,9 +13,7 @@ export default function BaseCard({
     return (
         <motion.div
             className={`relative rounded-2xl overflow-hidden group transition-all duration-300 ${className}`}
-            whileHover={{ scale: 1.04 }}
-            transition={{ type: "spring" }}
-            
+            whileHover={{ scale: 1.04 }}            
         >
             {/* خلفية متدرجة */}
             <div
@@ -32,7 +30,7 @@ export default function BaseCard({
             <div className="absolute inset-0 z-0 
                 bg-white/60 dark:bg-black/40 
                 backdrop-blur-lg rounded-2xl 
-                border border-gray-200/40 dark:border-zinc-700/40" 
+                 border-gray-200/40 dark:border-zinc-700/40" 
             />
 
             {/* محتوى الكارد */}

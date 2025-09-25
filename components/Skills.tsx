@@ -65,7 +65,7 @@ export default function Skills() {
 
   return (
     <SectionContainer id="skills" title={t("skills")}>
-      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-y-8 gap-x-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-4">
         {Object.entries(skillsByCategory).map(([category, skills], categoryIndex) => (
           <motion.div
             key={categoryIndex}
@@ -75,20 +75,20 @@ export default function Skills() {
             viewport={{ once: true }}
             className="relative rounded-2xl border border-gray-200 dark:border-gray-700 
                        bg-gradient-to-br from-white/70 to-gray-100/50 dark:from-gray-900/70 dark:to-gray-800/50 
-                       shadow-lg p-6 hover:shadow-2xl transition-all duration-300"
+                       shadow-lg p-4 md:p-6 hover:shadow-2xl transition-all duration-300"
           >
             {/* Category Title */}
             <h3 className="text-2xl font-bold mb-6 capitalize text-gray-800 dark:text-gray-100 relative w-fit">
               {category}
-              <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-gray-500 to-transparent rounded-full"></span>
+              <span className="absolute -bottom-1 start-0 w-full h-1 bg-gradient-to-r from-gray-500 to-transparent rounded-full"></span>
             </h3>
 
             {/* Skills */}
-            <ul className="grid grid-cols-2 gap-4">
+            <ul className="grid grid-cols-2 gap-2 md:gap-4">
               {skills.map((skill, skillIndex) => (
                 <li
                   key={skillIndex}
-                  className="flex items-center gap-4 p-3 rounded-xl 
+                  className="flex items-center gap-2 p-2 rounded-xl 
                              bg-white/60 dark:bg-gray-800/60 
                              shadow-sm hover:shadow-md 
                              hover:scale-[1.02] transition-all duration-300"

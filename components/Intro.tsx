@@ -9,9 +9,8 @@ export default function Intro() {
     return (
         <SectionContainer
             id="home"
-            className="flex bg-white dark:bg-gray-900"
         >
-            <div className=" w-full grid lg:grid-cols-2 gap-8 items-center md:gap-12 ">
+            <div className="mt-10 w-full grid lg:grid-cols-2 gap-y-12 items-center">
                 {/* Text Content */}
                 <div className="order-2 lg:order-1">
                     <div className="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">
@@ -26,11 +25,11 @@ export default function Intro() {
                         {t('web_developer')}
                     </h2>
 
-                    <p className="text-base  sm:text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed  md:max-w-3xl">
+                    <p className="text-base text-justify sm:text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed  md:max-w-3xl">
                         {t('intro_desc')}
                     </p>
 
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-y-4 gap-x-1">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-y-4 gap-x-4">
                         <DownloadCv/>
                         <SocialMedia />
                     </div>

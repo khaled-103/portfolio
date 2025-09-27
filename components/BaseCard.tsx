@@ -10,42 +10,27 @@ export default function BaseCard({
     className?: string;
     children: ReactNode;
 }) {
-    return (
+        return (
         <motion.div
-            className={`relative rounded-2xl overflow-hidden group transition-all duration-300 ${className}`}
-            whileHover={{ scale: 1.04 }}            
+            className={`relative h-full rounded-3xl overflow-hidden group transition-all duration-300 ${className}`}
+            whileHover={{ scale: 1.03 }}
         >
-            {/* خلفية متدرجة */}
-            <div
-                className="absolute inset-0 z-0 opacity-80 group-hover:opacity-100 blur-xl transition-all duration-500"
-            >
+            {/* خلفية متدرجة ناعمة */}
+            <div className="absolute inset-0 z-0 opacity-70 group-hover:opacity-90 blur-2xl transition-all duration-500">
                 <div className="w-full h-full 
                     bg-gradient-to-br 
-                    from-blue-100 via-orange-100 to-white 
-                    dark:from-blue-500 dark:via-orange-400 dark:to-blue-300" 
+                    from-blue-100 via-blue-50 to-orange-100 
+                    dark:from-blue-900 dark:via-blue-800 dark:to-orange-800" 
                 />
             </div>
 
-            {/* تأثير زجاجي يدعم Light/Dark */}
-            <div className="absolute inset-0 z-0 
-                bg-white/60 dark:bg-black/40 
-                backdrop-blur-lg rounded-2xl 
-                 border-gray-200/40 dark:border-zinc-700/40" 
-            />
-
             {/* محتوى الكارد */}
-            <div
-                className="relative z-10 w-full h-full p-px rounded-2xl 
-                shadow-sm hover:shadow-lg transition-all duration-500"
-            >
-                <div
-                    className="w-full h-full rounded-[calc(1rem-1px)] 
-                    p-6 md:p-8 flex flex-col items-center justify-center text-center"
-                >
+            <div className="relative z-10 w-full h-full p-1 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-500">
+                <div className="w-full h-full rounded-[calc(1rem-1px)] p-6 md:p-8 flex flex-col items-center justify-center text-center">
                     {children}
                 </div>
             </div>
         </motion.div>
-    
     );
+
 }

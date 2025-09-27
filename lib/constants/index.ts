@@ -18,3 +18,8 @@ export const contactInfo = {
     "country":"palestine",
     "city":"gaza"
 };
+
+
+export const Pagination = {
+    itemsPerPage:6
+};

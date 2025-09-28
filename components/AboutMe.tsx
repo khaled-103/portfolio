@@ -13,15 +13,15 @@ import AboutCard from "./AboutCard";
 export default function AboutMe() {
     const t = useTranslations();
     const cardVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0},
+        visible: { opacity: 1},
     };
     return (
         <SectionContainer title={t('about_me')}>
             <motion.p
                 className="text-base text-justify sm:text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed  md:max-w-3xl"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0}}
+                whileInView={{ opacity: 1}}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
             >

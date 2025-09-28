@@ -29,7 +29,7 @@ export default function Intro() {
                         {t('intro_desc')}
                     </p>
 
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-y-4 gap-x-4">
+                    <div className="flex flex-row items-center gap-4">
                         <DownloadCv/>
                         <SocialMedia />
                     </div>

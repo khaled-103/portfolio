@@ -69,8 +69,8 @@ export default function Skills() {
         {Object.entries(skillsByCategory).map(([category, skills], categoryIndex) => (
           <motion.div
             key={categoryIndex}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: categoryIndex * 0.15 }}
             viewport={{ once: true }}
             className="relative rounded-2xl border border-gray-200 dark:border-gray-700 

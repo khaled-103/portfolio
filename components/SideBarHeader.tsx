@@ -140,23 +140,6 @@ export default function SideBarHeader() {
                   </motion.a>
                 ))}
               </nav>
-
-              {/* Footer */}
-              <div className="pt-6 mt-6 border-t border-gray-200 dark:border-gray-800">
-                <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                  © {new Date().getFullYear()} {t("khaled_ali")}
-                </p>
-
-                {/* Social icons */}
-                <div className="flex justify-center gap-4 mt-4">
-                  <a href="https://github.com/" target="_blank" className="hover:text-blue-600 dark:hover:text-blue-400">
-                    <i className="ri-github-line text-xl" />
-                  </a>
-                  <a href="https://linkedin.com/" target="_blank" className="hover:text-blue-600 dark:hover:text-blue-400">
-                    <i className="ri-linkedin-line text-xl" />
-                  </a>
-                </div>
-              </div>
             </motion.aside>
           </>
         )}

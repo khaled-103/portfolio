@@ -19,8 +19,8 @@ export default function Experience() {
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1}}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
             className="relative mb-10 ms-6"

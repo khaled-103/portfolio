@@ -47,7 +47,7 @@ export default function ProjectCard({ item }: {
             {/* Content */}
             <div className="px-2 py-5 flex-1 flex flex-col">
                 <div className="mb-4">
-                    <h2  className=" line-clamp-1 text-lg font-semibold capitalize mb-4 
+                    <h2  className="line-clamp-none sm:line-clamp-1 text-lg font-semibold capitalize mb-4 
                           text-gray-900 dark:text-white 
                           group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-500">
                         {item.title}

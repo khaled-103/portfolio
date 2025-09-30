@@ -1,7 +1,7 @@
 "use client";
 /* you must lazy load this component it use local storage */
 import { Theme } from "@/lib/types";
-import { useEffect , useState } from "react";
+import { useEffect, useState } from "react";
 import { DEFAULT_THEME } from "@/lib/constants";
 import { FaRegMoon } from "react-icons/fa";
 import { IoSunnyOutline } from "react-icons/io5";
@@ -9,15 +9,15 @@ import { IoSunnyOutline } from "react-icons/io5";
 export default function ThemeToggle() {
     const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
     const [isAnimating, setIsAnimating] = useState(false);
-    
+
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme");
         if (savedTheme === "dark" || savedTheme === "light")
             handleThemeChange(savedTheme);
-        else 
+        else
             handleThemeChange(DEFAULT_THEME);
     }, []);
-    
+
     function handleThemeChange(theme: Theme) {
         setIsAnimating(true);
         setTimeout(() => {
@@ -32,16 +32,18 @@ export default function ThemeToggle() {
     return (
         <div className={`relative w-6 h-6 flex items-center justify-center ${isAnimating ? "animate-spin" : ""}`}>
             {theme === "dark" ? (
-                <IoSunnyOutline 
+                <IoSunnyOutline
                     className="cursor-pointer text-gray-600 dark:text-gray-300 text-xl 
-                               hover:text-amber-500 dark:hover:text-amber-400 transition-all duration-300" 
-                    onClick={() => handleThemeChange("light")} 
+                               hover:text-amber-500 dark:hover:text-amber-400 transition-all duration-300"
+                    onClick={() => handleThemeChange("light")}
+                    aria-label="change to light mode"
                 />
             ) : (
-                <FaRegMoon 
+                <FaRegMoon
                     className="cursor-pointer text-gray-600 dark:text-gray-300 text-xl 
-                              hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300" 
-                    onClick={() => handleThemeChange("dark")} 
+                              hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300"
+                    onClick={() => handleThemeChange("dark")}
+                    aria-label="change to dark mode"
                 />
             )}
         </div>

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import { LANGUAGES } from "@/lib/constants";
 import { LanguagesKeysType } from "@/lib/types";
@@ -7,10 +6,6 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/lib/i18n/routing';
 import { kufi, popions } from "@/lib/fonts";
 
-export const metadata: Metadata = {
-  title: "Khaled|Portfoilo",
-  description: "Khaled sheikh Ali Portfolio Website ",
-};
 
 export async function generateStaticParams() {
   return Object.keys(LANGUAGES).map((locale) => ({ locale }));

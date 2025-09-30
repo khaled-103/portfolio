@@ -12,7 +12,7 @@ export default function HomeHeader() {
         <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-md z-50 fixed top-0 inset-x-0">
             <div className="2xl:w-[80%] xl:w-[84%] lg:w-[90%] md:w-[92%] w-[95%] mx-auto py-3">
                 <div className="flex justify-between items-center">
-                    <div className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <div className="flex items-center gap-2">
                         {/* Logo with animation */}
                         <Link
                             href="/"
@@ -24,7 +24,7 @@ export default function HomeHeader() {
                         </Link>
 
                         {/* Language and theme switchers */}
-                        <div className="flex items-center space-x-2 rtl:space-x-reverse">
+                        <div className="flex items-center gap-1">
                             <LanguageSwitch />
                             <ThemeToggle />
                         </div>

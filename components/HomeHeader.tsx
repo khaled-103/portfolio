@@ -10,7 +10,7 @@ export default function HomeHeader() {
     const t = useTranslations();
     return (
         <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-md z-50 fixed top-0 inset-x-0">
-            <div className="2xl:w-[80%] xl:w-[84%] lg:w-[90%] md:w-[92%] w-[95%] mx-auto py-3">
+            <div className="2xl:w-[85%] xl:w-[87%] lg:w-[91%] md:w-[93%] w-[96%] mx-auto py-3">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center gap-2">
                         {/* Logo with animation */}

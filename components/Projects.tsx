@@ -7,7 +7,17 @@ import ProjectCard from "./ProjectCard";
 export default function Projects() {
   const t = useTranslations();
   const items = [
-
+    {
+      image: "/assets/proj-million1.png",
+      title: t("projects_items.million.title"),
+      description: t("projects_items.million.desc"),
+      tags: [
+        { title: "Html", colorClass: "text-orange-500" },
+        { title: "CSS", colorClass: "text-blue-500" },
+        { title: "React.js", colorClass: "text-blue-500" },
+      ],
+      demoUrl: "https://68fddb1949c0d50008193d42--who-will-million.netlify.app",
+    },
     {
       image: "/assets/proj-aptu.svg",
       title: t("projects_items.aptu.title"),
@@ -72,7 +82,7 @@ export default function Projects() {
       </div>
       {/* Show More Button */}
         {items.length > projectsList.length && (
-          <div className="flex items-center justify-center mt-6">
+          <div className="flex items-center justify-center mt-4">
             <button
               onClick={loadMore}
               className="flex cursor-pointer items-center justify-center gap-2 

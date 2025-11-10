@@ -29,7 +29,7 @@ export default function ProjectCard({ item }: {
     return (
         <div
             title={item.title}
-            className="group relative flex flex-col rounded-2xl overflow-hidden 
+            className="max-w-md mx-auto group relative flex flex-col rounded-2xl overflow-hidden 
                     bg-white dark:bg-gray-800 shadow-md border border-gray-100 dark:border-gray-700 
                     transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
         >

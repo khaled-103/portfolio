@@ -2,12 +2,12 @@
 import { useState } from "react";
 import { Pagination } from "../constants";
 
-export default function useLoadMore<T>(items: Array<T>) {
-    const [itemsList, setItemsList] = useState(() => items.slice(0, Pagination.itemsPerPage));
+export default function useLoadMore<T>(items: Array<T>,perPage=Pagination.itemsPerPage) {
+    const [itemsList, setItemsList] = useState(() => items.slice(0, perPage));
     const [index, setIndex] = useState(1);
     const loadMore = () => {
-        const start = index * Pagination.itemsPerPage;
-        const end = start + Pagination.itemsPerPage;
+        const start = index * perPage;
+        const end = start + perPage;
         setItemsList([...itemsList,...items.slice(start, end)]);
         setIndex(index + 1);
     };

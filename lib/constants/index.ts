@@ -21,5 +21,5 @@ export const contactInfo = {
 
 
 export const Pagination = {
-    itemsPerPage:6
+    itemsPerPage:4
 };

@@ -10,7 +10,7 @@ export default function Intro() {
         <SectionContainer
             id="home"
         >
-            <div className="mt-10 w-full grid lg:grid-cols-2 gap-y-12 items-center">
+            <div className="z-10 mt-10 w-full grid lg:grid-cols-2 gap-y-12 items-center">
                 {/* Text Content */}
                 <div className="order-2 lg:order-1">
                     <div className="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">

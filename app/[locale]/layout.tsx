@@ -29,7 +29,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning dir={LANGUAGES[locale as LanguagesKeysType].direction}>
       <body
-        className={`${FontClass} overflow-x-hidden dark:bg-[radial-gradient(#1e293B_1px,transparent_1px)] bg-[radial-gradient(#E5E7EB_1px,transparent_1px)] antialiased bg-white dark:bg-gray-900 min-h-screen bg-[size:20px_20px]`}
+        className={`${FontClass} overflow-x-hidden  antialiased bg-background min-h-screen `}
       >
         <script
           dangerouslySetInnerHTML={{

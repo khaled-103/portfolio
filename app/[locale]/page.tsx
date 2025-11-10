@@ -6,8 +6,9 @@ import HomeHeader from "@/components/HomeHeader";
 import Intro from "@/components/Intro";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import LightRays from "@/components/LightRays";
 import { Metadata } from "next";
-export async function generateMetadata({ params }: {params: Promise<{ locale: string }>}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const locale = (await params).locale;
   const isArabic = locale === "ar";
 
@@ -68,9 +69,26 @@ export async function generateMetadata({ params }: {params: Promise<{ locale: st
 }
 export default function Home() {
   return (
-    <>      
+    <>
+
+
+      <div className="dark:visible invisible fixed left-0 top-0 w-full h-screen">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#00ffff"
+          raysSpeed={1.3}
+          lightSpread={0.8}
+          rayLength={1.8}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0.1}
+          distortion={0.05}
+          className="custom-rays "
+        />
+      </div>
       <HomeHeader />
-      <main className=" mt-0 2xl:w-[85%] xl:w-[87%] lg:w-[91%] md:w-[93%] w-[96%] mx-auto">
+      <main className="relative mt-0 2xl:w-[85%] xl:w-[87%] lg:w-[91%] md:w-[93%] w-[96%] mx-auto">
+
         <Intro />
         <AboutMe />
         <Skills />
